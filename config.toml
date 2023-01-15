@@ -1,0 +1,25 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'MS Blog'
+theme = 'paper'
+
+[params]
+
+github = 'm4xshen'
+
+avatar = 'm4xshen@gmail.com'
+name = 'Max Shen'
+bio = 'I learn new things and share on this blog.'
+
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 10
+  [[menu.main]]
+    identifier = "projects"
+    name = "Projects"
+    url = "/projects/"
+    weight = 10
