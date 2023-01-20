@@ -4,23 +4,27 @@ date: 2023-01-12T14:06:52+08:00
 draft: true
 ---
 
-Vim can greatly increase your productivity. However, I've seen many people use vim in a wrong way. Today I'll share how to use vim in the right way.
+Vim can greatly increase your productivity. Today I'll share how to use vim in the right way.
 
 # Moving
 
 ## Vertical
 
-1. relative jump
+**Level 0**: Go to a line nearby.
+
+Solution: press `k` to go up and `j` to go down.
+
+**Level 1**: Jump to a line within the screen.
+
+Solution: Use relative jump. Remember to set `relativenumber` option to true.
 
 ```Vim
 {count}k " go up {count} lines
 {count}j " go down {count} lines 
 ```
 
-Use this when if the line you want to go to is within the screen. Remember to set relativenumber option to true.
-
 Example:
-Your cursor is at line 5. If you want to jump to the line of using namespace, you can press 3k.
+Your cursor is at line 5. If you want to jump to the line of `using namespace std;`, you can press `3k`.
 
 ```cpp
 4 #include <iostream>
@@ -32,31 +36,31 @@ Your cursor is at line 5. If you want to jump to the line of using namespace, yo
 2   return 0;
 3 }
 ```
-2. scroll page
+Situation 2: You want to jump to a line that you don't know the specific line number.
+
+Use page scrolling.
 
 ```Vim
 <C-u> " scroll half page up
 <C-d> " scroll half page up
 ```
 
-Use this if the line you want to go to is out of the screen.
-
 ## Horizontal
 
-1. jump by word
+Situation 1: You want to jump to a character that is nearby.
 
-Use this if the character you want to go to is nearby.
+Use jump by word.
 
 ```Vim
-w   " go one word forward
-b   " go one word backward
-e   " go to the end of word
+w   " jump one word forward
+b   " jump one word backward
+e   " jump to the end of word
 ge  " backward to the end of word
 ```
 
-2. jump to character
+Situation 2: You want to jump to a character that is far away.
 
-Use this if the character you want to go to is far away.
+Use jump to character
 
 ```Vim
 f{char} " go to the next occurrence of {char} to the right
@@ -65,7 +69,7 @@ t{char} " till before the next occurrence of {char} to the right
 ,       " Repeat latest f, t in opposite direction
 ```
 
-3. jump to start/end
+Situation 3: You want to jump to the start/end of the line.
 
 ```Vim
 0   "jump to the first character of the line
