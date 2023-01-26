@@ -3,6 +3,9 @@ languageCode = 'en-us'
 title = 'm4xshen'
 theme = 'paper'
 
+googleAnalytics = 'G-H19K5X8RCB'
+disqusShortname = 'm4xshen'
+
 [params]
 
 github = 'm4xshen'
