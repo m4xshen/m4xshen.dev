@@ -3,7 +3,7 @@ languageCode = 'en-us'
 title = 'm4xshen'
 theme = 'paper'
 
-googleAnalytics = 'G-H19K5X8RCB'
+googleAnalytics = 'UA-348126858'
 disqusShortname = 'm4xshen'
 
 [params]
@@ -12,7 +12,7 @@ github = 'm4xshen'
 
 avatar = 'm4xshen@gmail.com'
 name = 'Max Shen'
-bio = 'I learn new things consistently and share with you'
+bio = 'I learn new things consistently and share on this blog'
 
 [menu]
   [[menu.main]]
