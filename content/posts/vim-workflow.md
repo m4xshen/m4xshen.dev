@@ -2,6 +2,7 @@
 title: "Vim Workflow"
 date: 2023-01-26
 summary: "Max Shen share his Vim motion workflow and provide some examples when using Vim. You can learn when to use which Vim command in this tutorial."
+author: "Max Shen"
 ---
 
 There are many commands in Vim, and it is difficult to learn when to use which command. In this tutorial, I'll share my Vim workflow and give you some examples about how I use Vim.
