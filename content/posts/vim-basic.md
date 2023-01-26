@@ -1,6 +1,7 @@
 ---
 title: "Vim Basic"
 date: 2023-01-25
+summary: "Learn about the basics and practical comands in Vim. This tutorial covers normal mode, command-line mode and insert mode in Vim."
 ---
 
 In this tutorial, I'll teach you the basic and practical commands in Vim. I recommend you to open your Vim/Neovim and try the command while reading it.
