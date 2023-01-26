@@ -1,6 +1,6 @@
 baseURL = 'https://m4xshen.github.io'
 languageCode = 'en-us'
-title = 'MS Blog'
+title = 'm4xshen'
 theme = 'paper'
 
 [params]
@@ -9,8 +9,7 @@ github = 'm4xshen'
 
 avatar = 'm4xshen@gmail.com'
 name = 'Max Shen'
-bio = 'I learn new things and share on this blog.'
-
+bio = 'I learn new things consistently and share with you'
 
 [menu]
   [[menu.main]]
@@ -22,4 +21,9 @@ bio = 'I learn new things and share on this blog.'
     identifier = "projects"
     name = "Projects"
     url = "/projects/"
+    weight = 10
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
     weight = 10
