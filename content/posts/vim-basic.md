@@ -1,17 +1,19 @@
 ---
-title: "Vim Basic"
+title: "Vim Basics"
 date: 2023-01-25
 summary: "Learn about the basics and practical comands in Vim. This tutorial covers normal mode, command-line mode and insert mode in Vim."
 author: "Max Shen"
 ---
 
-In this tutorial, I'll teach you the basic and practical commands in Vim. I recommend you to open your Vim/Neovim and try the command while reading it.
+In this tutorial, I'll cover the basic commands that you need to know to edit text in Vim efficiently. I recommend you to open a file with Vim/Neovim and try the command while reading it.
 
-Today I'll only cover 3 modes in Vim:
+The 3 most used modes in Vim:
 
-- Normal mode: Used for edit text. The default mode.
-- Command-line mode: Used for executing commands (eg: save file, search).
+- Normal mode: Used for editing text, also the default mode.
+- Command-line mode: Used for executing commands (eg: save file, open help file).
 - Insert mode: Used for inserting text.
+
+You can learn more about each command with the Vim's help file. Open it by typing `:h {command name}` and hit enter. 
 
 # Normal Mode
 
@@ -84,7 +86,18 @@ Some examples of operator + motion:
 ```text
 cw          change a wrod
 dt(         delete till the first occurrence of (
-d5j         delete to the 5 lines down
+y5j         yank to 5 lines down
+```
+
+Exceptions:
+```text
+dd          delete current line
+D           delet until the end of the line
+yy          yank current line
+Y           yank until the end of the line
+cc          change current line
+C           change until the end of the line
+==          format current line
 ```
 
 ## Text Objects
@@ -103,26 +116,40 @@ at          around tag block (for HTML and XML)
 
 i{          inside {}
 a{          around {}
-...(you can apply this to [] () <> '' "" ``)
+...(you can apply this to any pair block [] () <> '' "" ``)
 ```
 
 Some examples of operator + text-object:
 
 ```text
-ci"         change in side ""
+ci"         change inside ""
 dap         delete around paragraph
 =i{         format the code inside {}
 ```
+
+Note: If the text-object is pair block, Vim will find the nearest one from the right of your cursor. This trick is very useful.
+
+Example (^ points to the position of your cursor):
+
+```cpp
+int main(void) {
+  cout << "test";
+^
+  return 0;
+}
+```
+
+You can use `ci"` to change the text inside "" pair although your cursor is at the beginning of the line.
 
 ## Scrolling
 
 See more with `:h scrolling`.
 
 ```text
-<C-U>       scroll window half a screen upwards
-<C-D>       scroll window half a screen downwards
-<C-B>       scroll window a screen upwards
-<C-F>       scroll window a screen downwards
+CTRL-U       scroll window half a screen upwards
+CTRL-D       scroll window half a screen downwards
+CTRL-B       scroll window a screen upwards
+CTRL-F       scroll window a screen downwards
 ```
 
 ## Inserting
@@ -146,25 +173,32 @@ Examples: `5k` will go up 5 lines
 
 ```text
 u           undo
-<C-r>       redo
+CTRL-R      redo
 .           repeat last change 
-ZQ          quit ithout checking for changes
-ZZ          save current file and close the current window
+ZQ          quit without checking for changes
+ZZ          save current file and quit
 ```
 
 # Insert Mode
 
 ```text
 <ESC>       leave insert mode
-<C-o>       execute one command in Normal mode and then return to Insert mode
+i_CTRL-O       execute one command in Normal mode and then return to Insert mode
 ```
 
 # Command-line Mode
 
 ```text
 :w<CR>          save the current file
+:q<CR>          quit
+:q!<CR>         quit without checking for changes (same as ZQ)
+:wq<CR>         save current file and quit (same as ZZ)
 /{pattern}<CR>  search forward for the occurrence of {pattern}
 ?{pattern}<CR>  search backward for the occurrence of {pattern}
 n			    repeat the latest `/` or `?`
 N			    repeat the latest `/` or `?` in opposite direction
 ```
+
+# Final Words
+
+Remember all these command takes some time. If you are already familiar with these commands, you can continue to read the [vim workflow](/posts/vim-workflow) to learn when to use which comand.

@@ -5,14 +5,14 @@ summary: "Max Shen share his Vim motion workflow and provide some examples when 
 author: "Max Shen"
 ---
 
-There are many commands in Vim, and it is difficult to learn when to use which command. In this tutorial, I'll share my Vim workflow and give you some examples about how I use Vim.
+There are many commands in Vim, and therefore it is difficult for beginner to learn how to achieve an editing task with less keystrokes. In this tutorial, I'll share my Vim workflow and give you some guidelines about how to edit text in Vim more efficiently.
 
 # Workflow
 
 There are some general rules in my workflow.
 
 1. Use relative jump (eg: `5k 9j`) for vertical movement inside screen.
-2. Use `<C-U> <C-D> <C-B> <C-F> gg G` for vertical movement outside screen.
+2. Use `CTRL-U CTRL-D CTRL-B CTRL-F gg G` for vertical movement outside screen.
 3. Use word-motion (`w W b B e E ge gE`) for short distance horizontal movement.
 4. Use `f F t T 0 ^ $ , ;` for long distance horizontal movement.
 5. Use `operator + motion/text-object` (eg: `ci{ d5j`) whenever possible.
@@ -57,7 +57,7 @@ Goal: Change `i-s+1` to `d` and add `new ` before `Date(y, m, d)`.
                         ^
 ```
 
-My approach is `Wct)d<C-o>FDnew `.
+My approach is `Wct)d<C-o>FDnew `. (`<C-o>` means `CTRL-O`)
 
 - `W`: Go one word forward, ignore symbol.
 - `ct)`: Change till before the occurrence of `)` to the right.

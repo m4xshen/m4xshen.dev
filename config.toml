@@ -6,13 +6,17 @@ theme = 'paper'
 googleAnalytics = 'UA-348126858'
 disqusShortname = 'm4xshen'
 
+[sitemap]
+  changefreq = 'monthly'
+  filename = 'sitemap.xml'
+  priority = 0.5
+
 [params]
+  github = 'm4xshen'
 
-github = 'm4xshen'
-
-avatar = 'm4xshen@gmail.com'
-name = 'Max Shen'
-bio = 'I learn new things consistently and share on this blog'
+  avatar = 'm4xshen@gmail.com'
+  name = 'Max Shen'
+  bio = 'I learn new things consistently and share on this blog'
 
 [menu]
   [[menu.main]]
