@@ -93,7 +93,7 @@ My approach is `<ESC>yy4jpci'Date<ESC>`.
 - `p`: Paste the line we just yanked.
 - `ci'Date<ESC>`: Change the content inside '', type `Date` and leave Insert mode.
 
-![situation3](https://user-images.githubusercontent.com/74842863/215338604-95032321-51a2-4921-a64a-d1be91d8d76b.gif)
+![situation3](https://user-images.githubusercontent.com/74842863/215339692-810b79ea-fe3d-41f9-b3d0-dcff3cb11810.gif)
 
 ## Situation 4
 
