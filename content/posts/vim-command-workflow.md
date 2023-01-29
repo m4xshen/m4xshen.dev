@@ -9,7 +9,7 @@ There are many commands in Vim, which means that you can achieve a same goal wit
 
 # Guidelines
 
-There are some general rules of my workflow.
+Here are some general rules of my workflow.
 
 1. Don't use arrow keys and mouse.
 2. Use relative jump (eg: `5k 12j`) for vertical movement inside screen.
@@ -40,13 +40,14 @@ Goal: Change `activeList` to `this` and add a `;` at the end of the line.
     ^
 ```
 
-My approach is `k^cwthis<ESC>A;<ESC>`.
+My approach is `-cwthis<ESC>A;<ESC>`.
 
-- `k`: Go up 1 line.
-- `^`: Jump to the first non-blank character of the line.
+- `-`: Go 1 line upward, on the first non-blank character
 - `cwthis`: Change the word and type `this`.
 - `<ESC>`: Leave insert mode.
 - `A;<ESC>`: Jump to the end of the line, type `;` and leave Insert mode.
+
+![situation1](https://user-images.githubusercontent.com/74842863/215338597-2ec8d0f1-dfc3-47ef-9cfd-f646fb4f1a57.gif)
 
 ## Situation 2
 
@@ -65,6 +66,8 @@ My approach is `Wct)d<C-o>FDnew <ESC>`. (`<C-o>` means `CTRL-O`)
 - `<C-o>`: Execute one command in Normal mode and then return to Insert mode.
 - `FD`: Go to the occurrence of `D` to the left.
 - `new <ESC>`: Type `new ` and leave Insert mode.
+
+![situation2](https://user-images.githubusercontent.com/74842863/215338599-406d97d0-18a1-49f3-a7c7-817887b60724.gif)
 
 ## Situation 3
 
@@ -89,6 +92,8 @@ My approach is `<ESC>yy4jpci'Date<ESC>`.
 - `4j`: Go down 4 line.
 - `p`: Paste the line we just yanked.
 - `ci'Date<ESC>`: Change the content inside '', type `Date` and leave Insert mode.
+
+![situation3](https://user-images.githubusercontent.com/74842863/215338604-95032321-51a2-4921-a64a-d1be91d8d76b.gif)
 
 ## Situation 4
 
@@ -121,6 +126,8 @@ My approach is `dap8kp`.
 - `dap`: Delete around the paragraph.
 - `8k`: Go up 8 lines.
 - `p`: Paste the paragraph we just deleted.
+
+![situation4](https://user-images.githubusercontent.com/74842863/215338606-c2e3fe70-7221-4fdd-88e5-655fe24eca49.gif)
 
 # Final Words
 
