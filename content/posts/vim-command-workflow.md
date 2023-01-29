@@ -1,27 +1,28 @@
 ---
-title: "Vim Workflow"
+title: "Vim Command Workflow"
 date: 2023-01-26
-summary: "Max Shen share his Vim motion workflow and provide some examples when using Vim. You can learn when to use which Vim command in this tutorial."
+summary: "Max Shen shares his Vim motion workflow and provide some guidelines about how to edit text in Vim efficiently. You can learn when to use which Vim command in this tutorial."
 author: "Max Shen"
 ---
 
-There are many commands in Vim, and therefore it is difficult for beginner to learn how to achieve an editing task with less keystrokes. In this tutorial, I'll share my Vim workflow and give you some guidelines about how to edit text in Vim more efficiently.
+There are many commands in Vim, which means that you can achieve a same goal with many approaches. Therefore it is difficult for beginner to learn how to accomplish an editing task with less keystrokes. In this tutorial, I'll share my Vim command workflow and give you some guidelines about how to move/edit text in Vim efficiently.
 
-# Workflow
+# Guidelines
 
-There are some general rules in my workflow.
+There are some general rules of my workflow.
 
-1. Use relative jump (eg: `5k 9j`) for vertical movement inside screen.
-2. Use `CTRL-U CTRL-D CTRL-B CTRL-F gg G` for vertical movement outside screen.
-3. Use word-motion (`w W b B e E ge gE`) for short distance horizontal movement.
-4. Use `f F t T 0 ^ $ , ;` for long distance horizontal movement.
-5. Use `operator + motion/text-object` (eg: `ci{ d5j`) whenever possible.
+1. Don't use arrow keys and mouse.
+2. Use relative jump (eg: `5k 12j`) for vertical movement inside screen.
+3. Use `CTRL-U CTRL-D CTRL-B CTRL-F gg G` for vertical movement outside screen.
+4. Use word-motion (`w W b B e E ge gE`) for short distance horizontal movement.
+5. Use `f F t T 0 ^ $ , ;` for mid long distance horizontal movement.
+6. Use `operator + motion/text-object` (eg: `ci{ d5j`) whenever possible.
 
-If you are not familiar with some of these concepts, please read about the [vim basic](/posts/vim-basic) first.
+If you are not familiar with some of these concepts, please learn about the [vim basic commands](/posts/vim-basic-commands) first.
 
 # Examples
 
-Here are some real situations I faced when creating a todo list website with javascript. You can think about how you will achieve the goal first and then see my approach.
+Here are 4 real situations I faced when creating a todo list website with javascript. You can think about how you will achieve the editing goal first and then see my approach.
 
 Notes:
 - `^` or `v` points to the position of the cursor.
@@ -32,46 +33,45 @@ Notes:
 Goal: Change `activeList` to `this` and add a `;` at the end of the line.
 
 ```javascript
-// current mode: NORMAL
+// current mode: Normal
   2 if(this.sortMethod == 'Name') {
   1   activeList.uncheckedTodo.sort(sortWithName)
 189 }
     ^
 ```
 
-My approach is `k^cwthis<ESC>A;`.
+My approach is `k^cwthis<ESC>A;<ESC>`.
 
 - `k`: Go up 1 line.
 - `^`: Jump to the first non-blank character of the line.
 - `cwthis`: Change the word and type `this`.
 - `<ESC>`: Leave insert mode.
-- `A;`: Jump to the end of the line and type `;`.
+- `A;<ESC>`: Jump to the end of the line, type `;` and leave Insert mode.
 
 ## Situation 2
 
 Goal: Change `i-s+1` to `d` and add `new ` before `Date(y, m, d)`.
 
 ```javascript
-// current mode: NORMAL
+// current mode: Normal
 454 console.log(Date(y, m, i-s+1));
                         ^
 ```
 
-My approach is `Wct)d<C-o>FDnew `. (`<C-o>` means `CTRL-O`)
+My approach is `Wct)d<C-o>FDnew <ESC>`. (`<C-o>` means `CTRL-O`)
 
 - `W`: Go one word forward, ignore symbol.
-- `ct)`: Change till before the occurrence of `)` to the right.
-- `d<ESC>`: Type `d` and exit Insert mode.
+- `ct)d`: Change till before the occurrence of `)` to the right and type `d`.
 - `<C-o>`: Execute one command in Normal mode and then return to Insert mode.
 - `FD`: Go to the occurrence of `D` to the left.
-- `new `: Type `new `.
+- `new <ESC>`: Type `new ` and leave Insert mode.
 
 ## Situation 3
 
 Goal: Add a line `activeList.sortMethod = 'Date';` below `document.querySelector('.sort-date')...`.
 
 ```javascript
-// current mode: INSERT
+// current mode: Insert
   1 document.querySelector('.sort-name').addEventListener('click', () => {
 343   activeList.sortMethod = 'Name'; 
   1   activeList.update();           ^
@@ -82,20 +82,20 @@ Goal: Add a line `activeList.sortMethod = 'Date';` below `document.querySelector
   6 })
 ```
 
-My approach is `<ESC>yy4jpci'Date`.
+My approach is `<ESC>yy4jpci'Date<ESC>`.
 
 - `<ESC>`: Leave insert mode.
 - `yy`: Yank current line.
 - `4j`: Go down 4 line.
 - `p`: Paste the line we just yanked.
-- `ci'Date`: Change the content inside '' and type `Date`.
+- `ci'Date<ESC>`: Change the content inside '', type `Date` and leave Insert mode.
 
 ## Situation 4
 
 Goal: Move the whole block of `//sort` (line 200 ~ 207) to the beginning of `update()` function.
 
 ```javascript
-// current mode: NORMAL
+// current mode: Normal
   8 update() {
   7   this.checkedTodo.forEach((todo) => {
   6     this.element.insertBefore(todo.element, todoCreator.nextSibling);
@@ -124,4 +124,4 @@ My approach is `dap8kp`.
 
 # Final Words
 
-If you just start learning Vim operators, motions, it may take some times to think of what commands to use for each situation. However, If you keep practicing and using them, you'll become faster and faster. Finally, you'll have an ituition in using commands.
+If you just start learning Vim operators, motions, it may take some times to think of what commands to use for each situation. However, If you keep practicing and using them, you'll become faster and faster. Finally, you'll have an muscle memory in using commands.

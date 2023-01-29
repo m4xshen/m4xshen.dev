@@ -1,15 +1,15 @@
 ---
-title: "Vim Basics"
+title: "Vim Basic Commands"
 date: 2023-01-25
 summary: "Learn about the basics and practical comands in Vim. This tutorial covers normal mode, command-line mode and insert mode in Vim."
 author: "Max Shen"
 ---
 
-In this tutorial, I'll cover the basic commands that you need to know to edit text in Vim efficiently. I recommend you to open a file with Vim/Neovim and try the command while reading it.
+In this tutorial, I'll cover the basic commands that you need to know to work in Vim efficiently. I recommend you to open a file with Vim/Neovim and try the command while reading it.
 
 The 3 most used modes in Vim:
 
-- Normal mode: Used for editing text, also the default mode.
+- Normal mode: Used for moving/editing text. When you press `<ESC>` in other modes, you'll get back to Normal mode.
 - Command-line mode: Used for executing commands (eg: save file, open help file).
 - Insert mode: Used for inserting text.
 
@@ -63,7 +63,7 @@ ge			go backward to the end of word
 gE			go backward to the end of word, ignore symbol
 ```
 
-The pattern of editing text looks like this:
+After being able to move in Vim, let's learn how to editing text. The pattern of editing looks like this:
 
 ```text
 operator + motion or text-object
@@ -77,7 +77,7 @@ See more with `:h operator`.
 d           delete
 y           yank(copy) into register
 (after delete or yank you can use `p` to paste)
-c           change
+c           change(delete and start insert)
 ~           swap case
 =           format
 ```
@@ -172,6 +172,10 @@ You can add number before command to execute it [count] times.
 Examples: `5k` will go up 5 lines
 
 ```text
+s           delete character and start insert (synonym for cl)
+S           delete line and start insert (synonym of cc)
+x           delete character under the cursor
+X           delete character before the cursor
 u           undo
 CTRL-R      redo
 .           repeat last change 
@@ -183,11 +187,12 @@ ZZ          save current file and quit
 
 ```text
 <ESC>       leave insert mode
-i_CTRL-O       execute one command in Normal mode and then return to Insert mode
+i_CTRL-O    execute one command in Normal mode and then return to Insert mode
 ```
 
 # Command-line Mode
 
+(`<CR>` means enter)
 ```text
 :w<CR>          save the current file
 :q<CR>          quit
@@ -201,4 +206,4 @@ N			    repeat the latest `/` or `?` in opposite direction
 
 # Final Words
 
-Remember all these command takes some time. If you are already familiar with these commands, you can continue to read the [vim workflow](/posts/vim-workflow) to learn when to use which comand.
+Remember all these command takes some time. If you are already familiar with these commands, you can continue to read the [vim command workflow](/posts/vim-command-workflow) to learn how to move/edit text in Vim efficiently.
