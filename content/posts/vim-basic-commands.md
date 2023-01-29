@@ -1,7 +1,7 @@
 ---
 title: "Vim Basic Commands"
 date: 2023-01-25
-summary: "Learn about the basics and practical comands in Vim. This tutorial covers normal mode, command-line mode and insert mode in Vim."
+summary: "In this tutorial, you'll learn the basic commands in Normal, Command-line and Insert mode that you need to know to work in Vim efficiently."
 author: "Max Shen"
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Vim Command Workflow"
 date: 2023-01-26
-summary: "Max Shen shares his Vim motion workflow and provide some guidelines about how to edit text in Vim efficiently. You can learn when to use which Vim command in this tutorial."
+summary: "In this tutorial, I'll share my Vim command workflow and give you some guidelines about how to move and edit text in Vim efficiently."
 author: "Max Shen"
 ---
 
