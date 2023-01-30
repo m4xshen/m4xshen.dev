@@ -131,4 +131,4 @@ My approach is `dap8kp`.
 
 # Final Words
 
-If you just start learning Vim operators, motions, it may take some times to think of what commands to use for each situation. However, If you keep practicing and using them, you'll become faster and faster. Finally, you'll have an muscle memory in using commands.
+If you just start learning Vim operators, motions, it may take some times to think of what commands to use for each situation. However, If you keep practicing and using them, you'll become faster and faster. After a while, you’ll develop muscle memory for using these commands.
