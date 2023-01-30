@@ -1,19 +1,24 @@
 baseURL = 'https://m4xshen.me'
 languageCode = 'en-us'
-title = 'm4xshen'
+title = 'Max Shen'
 theme = 'paper'
+paginate = 5
 
 googleAnalytics = 'UA-348126858'
 disqusShortname = 'm4xshen'
 
+[author]
+  name = 'Max Shen'
+
 [sitemap]
-  changefreq = 'monthly'
+  changefreq = 'daily'
   filename = 'sitemap.xml'
   priority = 0.5
 
 [params]
   github = 'm4xshen'
-
+  rss = true                                # show rss icon
+  description = "Hi I'm Max Shen. Here's my personal blog where I share my learning journey to help and inspire other people."
   avatar = 'm4xshen@gmail.com'
   name = 'Max Shen'
   bio = 'I learn new things consistently and share on this blog'
@@ -34,3 +39,8 @@ disqusShortname = 'm4xshen'
     name = "Posts"
     url = "/posts/"
     weight = 10
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  series = "series"

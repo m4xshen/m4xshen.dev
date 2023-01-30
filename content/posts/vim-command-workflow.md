@@ -3,6 +3,7 @@ title: "Vim Command Workflow"
 date: 2023-01-26
 summary: "In this tutorial, I'll share my Vim command workflow and give you some guidelines about how to move and edit text in Vim efficiently."
 author: "Max Shen"
+tags: ["vim", "workflow"]
 ---
 
 There are many commands in Vim, which means that you can achieve a same goal with many approaches. Therefore it is difficult for beginner to learn how to accomplish an editing task with less keystrokes. In this tutorial, I'll share my Vim command workflow and give you some guidelines about how to move/edit text in Vim efficiently.

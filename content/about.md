@@ -1,8 +1,7 @@
 +++
 title = "About Me"
-description = "Hugo, the world's fastest framework for building websites"
-aliases = ["about-us", "about-hugo", "contact"]
-author = "Hugo Authors"
+summary = "Hi, my name is Max Shen, a Taiwanese college student. I love to learn new things about computer science by making projects. This blog is the place where I share my learning journey to help and inspire other people."
+author = "Max Shen"
 +++
 
 Hi, my name is Max Shen, a Taiwanese college student. I love to learn new things about computer science by making [projects](/projects). This blog is the place where I share my learning journey to help and inspire other people like you!
