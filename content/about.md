@@ -2,6 +2,7 @@
 title = "About Me"
 summary = "Hi, my name is Max Shen, a Taiwanese college student. I love to learn new things about computer science by making projects. This blog is the place where I share my learning journey to help and inspire other people."
 author = "Max Shen"
+comments = false
 +++
 
 Hi, my name is Max Shen, a Taiwanese college student. I love to learn new things about computer science by making [projects](/projects). This blog is the place where I share my learning journey to help and inspire other people like you!
