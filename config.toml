@@ -17,7 +17,7 @@ disqusShortname = 'm4xshen'
 
 [params]
   github = 'm4xshen'
-  rss = true                                # show rss icon
+  rss = true
   description = "Hi I'm Max Shen. Here's my personal blog where I share my learning journey to help and inspire other people."
   avatar = 'm4xshen@gmail.com'
   name = 'Max Shen'
