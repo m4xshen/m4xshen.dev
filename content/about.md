@@ -14,7 +14,7 @@ You can contact me through m4xshen@gmail.com
 I'm familiar with C++, Lua, Javascript.
 
 ## Fun facts
-- I like to [rice my desktop](https://github.com/m4xshen/dotfiles).
+- I like to [customize my desktop](https://github.com/m4xshen/dotfiles).
 - My best typing speed in 1 minute is 115wpm.
 - I'm currently learning how to build a game without engine.
 - I major in Electric Engineering.
