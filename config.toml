@@ -16,9 +16,9 @@ disqusShortname = 'm4xshen'
   priority = 0.5
 
 [params]
+  description = "Hi I'm Max Shen. Here's my personal blog where I share my learning journey to help and inspire other people. I post tutorial about Vim, Linux and programming."
   github = 'm4xshen'
   rss = true
-  description = "Hi I'm Max Shen. Here's my personal blog where I share my learning journey to help and inspire other people."
   avatar = 'm4xshen@gmail.com'
   name = 'Max Shen'
   bio = 'I learn new things consistently and share on this blog'
