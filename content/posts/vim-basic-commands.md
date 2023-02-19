@@ -86,7 +86,7 @@ c           change(delete and start insert)
 
 Some examples of operator + motion:
 ```text
-cw          change a wrod
+cw          change a word
 dt(         delete till the first occurrence of (
 y5j         yank to 5 lines down
 ```
@@ -94,7 +94,7 @@ y5j         yank to 5 lines down
 Exceptions:
 ```text
 dd          delete current line
-D           delet until the end of the line
+D           delete until the end of the line
 yy          yank current line
 Y           yank until the end of the line
 cc          change current line
@@ -150,8 +150,8 @@ See more with `:h scrolling`.
 ```text
 CTRL-U       scroll window half a screen upwards
 CTRL-D       scroll window half a screen downwards
-CTRL-B       scroll window a screen upwards
-CTRL-F       scroll window a screen downwards
+CTRL-B       scroll window a full screen upwards
+CTRL-F       scroll window a full screen downwards
 ```
 
 ## Inserting
