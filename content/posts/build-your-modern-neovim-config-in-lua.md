@@ -1,7 +1,7 @@
 ---
 author: "Max Shen"
 title: "Build your modern Neovim config in Lua"
-date: 2023-02-24
+date: 2023-02-26
 summary: "In this tutorial you'll learn how to build and structure your modern Neovim config in Lua. I'll go through options, mappings, autocmds and plugins."
 tags: ["Neovim"]
 ---
@@ -35,13 +35,12 @@ My Neovim config structure:
 |       :
 ```
 
+The first line of `init.lua`:
 ```lua
--- init.lua
-
 require("config.options")
 ```
 
-When Neovim see this line on startup, it goes through the `runtimepath` which includes `~/.config/nvim`, search for `lua/` and load `/config/options.lua`.
+When Neovim reads this line on startup, it goes through the `runtimepath`, search for `lua/` and load `/config/options.lua`. The default `runtimepath` includes includes `~/.config/nvim`. This is why we put the `lua/` inside it.
 
 Notes:
 - `.` in the module name is treated as a directory separator when searching.
@@ -55,13 +54,11 @@ You can set options via Lua in two ways: `vim.opt` and `vim.o` series. I recomme
 - use `:append()`, `:prepend()` and `:remove()` to manipulate options
 - set its value to Lua table
 
-(see more with `:h lua-guide-options`)
+(see the differences between them with `:h lua-guide-options`)
 
-- `vim.opt`        behaves like `:set`
-- `vim.opt_global` behaves like `:setglobal`
-- `vim.opt_local`  behaves like `:setlocal`
+You can set options with `vim.opt.option-name = value`.
 
-part of my [lua/config/option.lua](https://github.com/m4xshen/dotfiles/blob/main/nvim/nvim/lua/config/options.lua):
+Part of my [lua/config/option.lua](https://github.com/m4xshen/dotfiles/blob/main/nvim/nvim/lua/config/options.lua):
 
 ```lua
 -- enable line number and relative line number
@@ -100,15 +97,15 @@ vim.keymap.set({mode}, {lhs}, {rhs}, {opts})
   - "i" for Insert mode
   - "t" for Terminal mode
   - "!" for Insert Insert and Command-line mode
-- {lhs}: (string) left-hand side of the mapping
-- {rhs}: (string or function) right-hand side of the mapping
+- {lhs}: (string) left-hand side of the mapping, the keys we want to map
+- {rhs}: (string or function) right-hand side of the mapping, the keys or function we want to execute after pressing {lhs}
 - {opts}: (table) optional parameters
   - silent: define a mapping that will not be echoed on the command line
   - noremap: disable recursive mapping
 
 See all available options with `:h map-arguments`.
 
-part of my [lua/config/mappings.lua](https://github.com/m4xshen/dotfiles/blob/main/nvim/nvim/lua/config/mappings.lua):
+Part of my [lua/config/mappings.lua](https://github.com/m4xshen/dotfiles/blob/main/nvim/nvim/lua/config/mappings.lua):
 
 ```lua
 -- map leader+w to save current file in normal mode
@@ -140,7 +137,7 @@ See all available events with `:h autocmd-events`.
 
 See all available options with `:h nvim_create_autocmd`.
 
-part of my [lua/config/autocmds.lua](https://github.com/m4xshen/dotfiles/blob/main/nvim/nvim/lua/config/autocmds.lua)
+Part of my [lua/config/autocmds.lua](https://github.com/m4xshen/dotfiles/blob/main/nvim/nvim/lua/config/autocmds.lua):
 
 ```lua
 -- set tab to 3 space when entering a buffer with .lua file
