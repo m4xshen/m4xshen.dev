@@ -17,11 +17,11 @@ The 3 most used modes in Vim:
 
 You can learn more about each command with the Vim's help file. Open it by typing `:h {command name}` and hit enter. 
 
-# Normal Mode
+## Normal Mode
 
 To begin with, let's learn how to move in Vim.
 
-## Up-down Motions
+### Up-down Motions
 
 See more with `:h up-down-motions`.
 
@@ -32,7 +32,7 @@ gg          go to first line
 G           go to last line
 ```
 
-## Left-right Motions
+### Left-right Motions
 
 See more with `:h left-right-motions`.
 
@@ -50,7 +50,7 @@ T{char}		go till after the occurrence of {char} to the left
 ,			repeat latest f, t, F or T in opposite direction
 ```
 
-## Word Motions
+### Word Motions
 
 See more with `:h word-motions`.
 
@@ -71,7 +71,7 @@ After being able to move in Vim, let's learn how to editing text. The pattern of
 operator + motion or text-object
 ```
 
-## Operator
+### Operator
 
 See more with `:h operator`.
 
@@ -102,7 +102,7 @@ C           change until the end of the line
 ==          format current line
 ```
 
-## Text Objects
+### Text Objects
 
 See more with `:h text-objects`.
 
@@ -143,7 +143,7 @@ int main(void) {
 
 You can use `ci"` to change the text inside "" pair although your cursor is at the beginning of the line.
 
-## Scrolling
+### Scrolling
 
 See more with `:h scrolling`.
 
@@ -154,7 +154,7 @@ CTRL-B       scroll window a full screen upwards
 CTRL-F       scroll window a full screen downwards
 ```
 
-## Inserting
+### Inserting
 
 See more with `:h inserting`.
 
@@ -167,7 +167,7 @@ o           begin a new line below the cursor and insert text
 O           begin a new line above the cursor and insert text
 ```
 
-## Others
+### Others
 
 You can add number before command to execute it [count] times.
 
@@ -185,14 +185,14 @@ ZQ          quit without checking for changes
 ZZ          save current file and quit
 ```
 
-# Insert Mode
+## Insert Mode
 
 ```text
 <ESC>       leave insert mode
 i_CTRL-O    execute one command in Normal mode and then return to Insert mode
 ```
 
-# Command-line Mode
+## Command-line Mode
 
 (`<CR>` means enter)
 ```text
@@ -206,6 +206,6 @@ n			    repeat the latest `/` or `?`
 N			    repeat the latest `/` or `?` in opposite direction
 ```
 
-# Final Words
+## Final Words
 
 Remember all these command takes some time. If you are already familiar with these commands, you can continue to read the [vim command workflow](/posts/vim-command-workflow) to learn how to move/edit text in Vim efficiently.

@@ -7,7 +7,7 @@ tags: ["vim"]
 draft: true
 ---
 
-# CTRL In Insert Mode
+## CTRL In Insert Mode
 
 ```text
 CTRL-W                      delete a word before the cursor

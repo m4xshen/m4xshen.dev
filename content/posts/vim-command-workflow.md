@@ -8,7 +8,7 @@ tags: ["vim", "workflow"]
 
 There are many commands in Vim, which means that you can achieve a same goal with many approaches. Therefore it is difficult for beginner to learn how to accomplish an editing task with less keystrokes. In this tutorial, I'll share my Vim command workflow and give you some guidelines about how to move/edit text in Vim efficiently.
 
-# Guidelines
+## Guidelines
 
 Here are some general rules of my workflow.
 
@@ -21,7 +21,7 @@ Here are some general rules of my workflow.
 
 If you are not familiar with some of these concepts, please learn about the [vim basic commands](/posts/vim-basic-commands) first.
 
-# Examples
+## Examples
 
 Here are 4 real situations I faced when creating a todo list website with javascript. You can think about how you will achieve the editing goal first and then see my approach.
 
@@ -29,7 +29,7 @@ Notes:
 - `^` or `v` points to the position of the cursor.
 - There are line number and relative line number on the left.
 
-## Situation 1
+### Situation 1
 
 Goal: Change `activeList` to `this` and add a `;` at the end of the line.
 
@@ -48,9 +48,9 @@ My approach is `-cwthis<ESC>A;<ESC>`.
 - `<ESC>`: Leave insert mode.
 - `A;<ESC>`: Jump to the end of the line, type `;` and leave Insert mode.
 
-![situation1](https://user-images.githubusercontent.com/74842863/215338597-2ec8d0f1-dfc3-47ef-9cfd-f646fb4f1a57.gif)
+![situation 1](https://user-images.githubusercontent.com/74842863/215338597-2ec8d0f1-dfc3-47ef-9cfd-f646fb4f1a57.gif)
 
-## Situation 2
+### Situation 2
 
 Goal: Change `i-s+1` to `d` and add `new ` before `Date(y, m, d)`.
 
@@ -68,9 +68,9 @@ My approach is `Wct)d<C-o>FDnew <ESC>`. (`<C-o>` means `CTRL-O`)
 - `FD`: Go to the occurrence of `D` to the left.
 - `new <ESC>`: Type `new ` and leave Insert mode.
 
-![situation2](https://user-images.githubusercontent.com/74842863/215338599-406d97d0-18a1-49f3-a7c7-817887b60724.gif)
+![situation 2](https://user-images.githubusercontent.com/74842863/215338599-406d97d0-18a1-49f3-a7c7-817887b60724.gif)
 
-## Situation 3
+### Situation 3
 
 Goal: Add a line `activeList.sortMethod = 'Date';` below `document.querySelector('.sort-date')...`.
 
@@ -94,9 +94,9 @@ My approach is `<ESC>yy4jpci'Date<ESC>`.
 - `p`: Paste the line we just yanked.
 - `ci'Date<ESC>`: Change the content inside '', type `Date` and leave Insert mode.
 
-![situation3](https://user-images.githubusercontent.com/74842863/215339692-810b79ea-fe3d-41f9-b3d0-dcff3cb11810.gif)
+![situation 3](https://user-images.githubusercontent.com/74842863/215339692-810b79ea-fe3d-41f9-b3d0-dcff3cb11810.gif)
 
-## Situation 4
+### Situation 4
 
 Goal: Move the whole block of `//sort` (line 200 ~ 207) to the beginning of `update()` function.
 
@@ -128,8 +128,8 @@ My approach is `dap8kp`.
 - `8k`: Go up 8 lines.
 - `p`: Paste the paragraph we just deleted.
 
-![situation4](https://user-images.githubusercontent.com/74842863/215338606-c2e3fe70-7221-4fdd-88e5-655fe24eca49.gif)
+![situation 4](https://user-images.githubusercontent.com/74842863/215338606-c2e3fe70-7221-4fdd-88e5-655fe24eca49.gif)
 
-# Final Words
+## Final Words
 
 If you just start learning Vim operators, motions, it may take some times to think of what commands to use for each situation. However, If you keep practicing and using them, you'll become faster and faster. After a while, you’ll develop muscle memory for using these commands.

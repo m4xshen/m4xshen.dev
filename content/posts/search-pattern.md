@@ -1,14 +1,13 @@
 ---
-title: "The CTRL Key In Vim"
-date: 2023-02-02
+title: "Vim Search Pattern"
+date: 2023-02-22
 summary: ""
 author: "Max Shen"
 tags: ["vim"]
 draft: true
 ---
 
-> usr_27.txt
-https://learnbyexample.gitbooks.io/vim-reference/content/Regular_Expressions.html
+> usr_27.txt https://learnbyexample.gitbooks.io/vim-reference/content/Regular_Expressions.html
 
 ### simple search patterns
 
