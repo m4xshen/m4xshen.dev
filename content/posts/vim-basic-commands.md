@@ -4,7 +4,6 @@ title: "Vim Basic Commands"
 date: 2023-01-25
 summary: "In this tutorial, you'll learn the basic commands in Normal, Command-line and Insert mode that you need to know to work in Vim efficiently."
 tags: ["vim"]
-categories: ["tutorial"]
 ---
 
 In this tutorial, I'll cover the basic commands that you need to know to work in Vim efficiently. I recommend you to open a file with Vim/Neovim and try the command while reading it.
