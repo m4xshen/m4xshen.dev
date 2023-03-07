@@ -43,3 +43,4 @@ disqusShortname = 'm4xshen'
 [taxonomies]
   category = "categories"
   tag = "tags"
+  series = "series"
