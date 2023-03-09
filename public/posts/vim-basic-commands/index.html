@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready text-sm lg:text-base"
+  style="--bg: #faf6f1"
+  lang="en-us"
+>
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>Vim Basic Commands - Max Shen</title>
+
+  
+  <meta name="theme-color" />
+  
+  <meta name="description" content="In this tutorial, you&rsquo;ll learn the basic commands in Normal, Command-line and Insert mode that you need to know to work in Vim efficiently." />
+  <meta
+    name="author"
+    content="Max Shen"
+  />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="https://m4xshen.me/main.min.css" />
+
+  
+  <script
+    defer
+    src="https://m4xshen.me/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+   
+  <link rel="preload" as="image" href="https://m4xshen.me/theme.png" />
+
+  
+  
+  
+  <link rel="preload" as="image" href="https://www.gravatar.com/avatar/ca6d5ab638ebf7849057ff0186f44f46?s=160&amp;d=identicon" />
+  
+  
+
+  
+  <link rel="preload" as="image" href="https://m4xshen.me/github.svg" />
+  
+  <link rel="preload" as="image" href="https://m4xshen.me/rss.svg" />
+  
+
+  
+  <link rel="icon" href="https://m4xshen.me/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://m4xshen.me/apple-touch-icon.png" />
+
+  
+  <meta name="generator" content="Hugo 0.110.0">
+
+  
+  
+
+  
+  
+  
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H19K5X8RCB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H19K5X8RCB');
+</script>
+
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-348126858', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+  
+  <meta property="og:title" content="Vim Basic Commands" />
+<meta property="og:description" content="In this tutorial, you&rsquo;ll learn the basic commands in Normal, Command-line and Insert mode that you need to know to work in Vim efficiently." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://m4xshen.me/posts/vim-basic-commands/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-01-25T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-01-25T00:00:00+00:00" />
+
+  
+  <meta itemprop="name" content="Vim Basic Commands">
+<meta itemprop="description" content="In this tutorial, you&rsquo;ll learn the basic commands in Normal, Command-line and Insert mode that you need to know to work in Vim efficiently."><meta itemprop="datePublished" content="2023-01-25T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-01-25T00:00:00+00:00" />
+<meta itemprop="wordCount" content="843">
+<meta itemprop="keywords" content="vim," />
+  
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Vim Basic Commands"/>
+<meta name="twitter:description" content="In this tutorial, you&rsquo;ll learn the basic commands in Normal, Command-line and Insert mode that you need to know to work in Vim efficiently."/>
+
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[5rem] max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+    <a
+      class="-translate-x-[1px] -translate-y-0.5 text-3xl font-bold"
+      href="https://m4xshen.me"
+      >Max Shen</a
+    >
+    <a
+      class="btn-dark ml-6 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+    ></a>
+  </div>
+
+  <a
+    class="btn-menu relative z-50 -mr-8 flex h-[5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+  ></a>
+
+  
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = `"#faf6f1"`.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-6">
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/about/"
+        >About</a
+      >
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/posts/"
+        >Posts</a
+      >
+      
+      <a
+        class="block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/projects/"
+        >Projects</a
+      >
+      
+    </nav>
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 dark:invert lg:mt-0 lg:ml-12 lg:items-center lg:space-x-6"
+    >
+      
+      <a
+        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href=" https://github.com/m4xshen "
+        target="_blank"
+      ></a>
+      
+      <a
+        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./rss.svg)"
+        href=" https://m4xshen.me/index.xml "
+        target="_blank"
+      ></a>
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-10rem)] max-w-3xl px-8 pt-20 pb-32 dark:prose-invert"
+    >
+      
+
+<article>
+  <header>
+    <h1 class="!my-0 pb-2.5">Vim Basic Commands</h1>
+
+    
+    <div class="text-sm opacity-60">
+      
+      <time>Jan 25, 2023</time>
+      
+      <span class="mx-1">&middot;</span>
+      <span>4 min read</span>
+    </div>
+    
+  </header>
+
+  
+  
+  <footer class="mt-8 flex flex-wrap">
+     
+    <a
+      class="mr-1.5 mb-1.5 rounded-lg bg-black/[3%] px-3 py-1 no-underline dark:bg-white/[8%]"
+      href="https://m4xshen.me/tags/vim"
+      >🏷️ vim</a
+    >
+    
+  </footer>
+  
+
+  <section><p>In this tutorial, I&rsquo;ll cover the basic commands that you need to know to work in Vim efficiently. I recommend you to open a file with Vim/Neovim and try the command while reading it.</p>
+<p>The 3 most used modes in Vim:</p>
+<ul>
+<li>Normal mode: Used for moving/editing text. When you press <code>&lt;ESC&gt;</code> in other modes, you&rsquo;ll get back to Normal mode.</li>
+<li>Command-line mode: Used for executing commands (eg: save file, open help file).</li>
+<li>Insert mode: Used for inserting text.</li>
+</ul>
+<p>You can learn more about each command with the Vim&rsquo;s help file. Open it by typing <code>:h {command name}</code> and hit enter.</p>
+<h2 id="normal-mode">Normal Mode</h2>
+<p>To begin with, let&rsquo;s learn how to move in Vim.</p>
+<h3 id="up-down-motions">Up-down Motions</h3>
+<p>See more with <code>:h up-down-motions</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>k           go up
+</span></span><span style="display:flex;"><span>j           go down
+</span></span><span style="display:flex;"><span>gg          go to first line
+</span></span><span style="display:flex;"><span>G           go to last line
+</span></span></code></pre></div><h3 id="left-right-motions">Left-right Motions</h3>
+<p>See more with <code>:h left-right-motions</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>h           go left 
+</span></span><span style="display:flex;"><span>l           go right 
+</span></span><span style="display:flex;"><span>0           go to the first character of the line
+</span></span><span style="display:flex;"><span>^			go to the first non-blank character of the line
+</span></span><span style="display:flex;"><span>$           go to the end of the line
+</span></span><span style="display:flex;"><span>f{char}		go to the occurrence of {char} to the right
+</span></span><span style="display:flex;"><span>F{char}		go to the occurrence of {char} to the left
+</span></span><span style="display:flex;"><span>t{char}		go till before the occurrence of {char} to the right
+</span></span><span style="display:flex;"><span>T{char}		go till after the occurrence of {char} to the left
+</span></span><span style="display:flex;"><span>;			repeat latest f, t, F or T
+</span></span><span style="display:flex;"><span>,			repeat latest f, t, F or T in opposite direction
+</span></span></code></pre></div><h3 id="word-motions">Word Motions</h3>
+<p>See more with <code>:h word-motions</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>w			go one word forward
+</span></span><span style="display:flex;"><span>W			go one word forward, ignore symbol
+</span></span><span style="display:flex;"><span>e			go forward to the end of word
+</span></span><span style="display:flex;"><span>E			go forward to the end of word, ignore symbol
+</span></span><span style="display:flex;"><span>b			go one word backward
+</span></span><span style="display:flex;"><span>B			go one word backward, ignore symbol
+</span></span><span style="display:flex;"><span>ge			go backward to the end of word
+</span></span><span style="display:flex;"><span>gE			go backward to the end of word, ignore symbol
+</span></span></code></pre></div><p>After being able to move in Vim, let&rsquo;s learn how to editing text. The pattern of editing looks like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>operator + motion or text-object
+</span></span></code></pre></div><h3 id="operator">Operator</h3>
+<p>See more with <code>:h operator</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>d           delete
+</span></span><span style="display:flex;"><span>y           yank(copy) into register
+</span></span><span style="display:flex;"><span>(after delete or yank you can use `p` to paste)
+</span></span><span style="display:flex;"><span>c           change(delete and start insert)
+</span></span><span style="display:flex;"><span>~           swap case
+</span></span><span style="display:flex;"><span>=           format
+</span></span></code></pre></div><p>Some examples of operator + motion:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>cw          change a word
+</span></span><span style="display:flex;"><span>dt(         delete till the first occurrence of (
+</span></span><span style="display:flex;"><span>y5j         yank to 5 lines down
+</span></span></code></pre></div><p>Exceptions:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>dd          delete current line
+</span></span><span style="display:flex;"><span>D           delete until the end of the line
+</span></span><span style="display:flex;"><span>yy          yank current line
+</span></span><span style="display:flex;"><span>Y           yank until the end of the line
+</span></span><span style="display:flex;"><span>cc          change current line
+</span></span><span style="display:flex;"><span>C           change until the end of the line
+</span></span><span style="display:flex;"><span>==          format current line
+</span></span></code></pre></div><h3 id="text-objects">Text Objects</h3>
+<p>See more with <code>:h text-objects</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>iw          inside word
+</span></span><span style="display:flex;"><span>aw          around word 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ip          inside paragraph
+</span></span><span style="display:flex;"><span>ap          around paragraph 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>it          inside tag block (for HTML and XML)
+</span></span><span style="display:flex;"><span>at          around tag block (for HTML and XML)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>i{          inside {}
+</span></span><span style="display:flex;"><span>a{          around {}
+</span></span><span style="display:flex;"><span>...(you can apply this to any pair block [] () &lt;&gt; &#39;&#39; &#34;&#34; ``)
+</span></span></code></pre></div><p>Some examples of operator + text-object:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>ci&#34;         change inside &#34;&#34;
+</span></span><span style="display:flex;"><span>dap         delete around paragraph
+</span></span><span style="display:flex;"><span>=i{         format the code inside {}
+</span></span></code></pre></div><p>Note: If the text-object is pair block, Vim will find the nearest one from the right of your cursor. This trick is very useful.</p>
+<p>Example (^ points to the position of your cursor):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">void</span>) {
+</span></span><span style="display:flex;"><span>  cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;test&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">^</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>You can use <code>ci&quot;</code> to change the text inside &quot;&quot; pair although your cursor is at the beginning of the line.</p>
+<h3 id="scrolling">Scrolling</h3>
+<p>See more with <code>:h scrolling</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>CTRL-U       scroll window half a screen upwards
+</span></span><span style="display:flex;"><span>CTRL-D       scroll window half a screen downwards
+</span></span><span style="display:flex;"><span>CTRL-B       scroll window a full screen upwards
+</span></span><span style="display:flex;"><span>CTRL-F       scroll window a full screen downwards
+</span></span></code></pre></div><h3 id="inserting">Inserting</h3>
+<p>See more with <code>:h inserting</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>i           insert text before the cursor
+</span></span><span style="display:flex;"><span>I           insert text before the first non-blank in the line
+</span></span><span style="display:flex;"><span>a           append text after the cursor
+</span></span><span style="display:flex;"><span>A           append text at the end of the line
+</span></span><span style="display:flex;"><span>o           begin a new line below the cursor and insert text
+</span></span><span style="display:flex;"><span>O           begin a new line above the cursor and insert text
+</span></span></code></pre></div><h3 id="others">Others</h3>
+<p>You can add number before command to execute it [count] times.</p>
+<p>Examples: <code>5k</code> will go up 5 lines</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>s           delete character and start insert (synonym for cl)
+</span></span><span style="display:flex;"><span>S           delete line and start insert (synonym of cc)
+</span></span><span style="display:flex;"><span>x           delete character under the cursor
+</span></span><span style="display:flex;"><span>X           delete character before the cursor
+</span></span><span style="display:flex;"><span>u           undo
+</span></span><span style="display:flex;"><span>CTRL-R      redo
+</span></span><span style="display:flex;"><span>.           repeat last change 
+</span></span><span style="display:flex;"><span>ZQ          quit without checking for changes
+</span></span><span style="display:flex;"><span>ZZ          save current file and quit
+</span></span></code></pre></div><h2 id="insert-mode">Insert Mode</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>&lt;ESC&gt;       leave insert mode
+</span></span><span style="display:flex;"><span>i_CTRL-O    execute one command in Normal mode and then return to Insert mode
+</span></span></code></pre></div><h2 id="command-line-mode">Command-line Mode</h2>
+<p>(<code>&lt;CR&gt;</code> means enter)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>:w&lt;CR&gt;          save the current file
+</span></span><span style="display:flex;"><span>:q&lt;CR&gt;          quit
+</span></span><span style="display:flex;"><span>:q!&lt;CR&gt;         quit without checking for changes (same as ZQ)
+</span></span><span style="display:flex;"><span>:wq&lt;CR&gt;         save current file and quit (same as ZZ)
+</span></span><span style="display:flex;"><span>/{pattern}&lt;CR&gt;  search forward for the occurrence of {pattern}
+</span></span><span style="display:flex;"><span>?{pattern}&lt;CR&gt;  search backward for the occurrence of {pattern}
+</span></span><span style="display:flex;"><span>n			    repeat the latest `/` or `?`
+</span></span><span style="display:flex;"><span>N			    repeat the latest `/` or `?` in opposite direction
+</span></span></code></pre></div><h2 id="final-words">Final Words</h2>
+<p>Remember all these command takes some time. If you are already familiar with these commands, you can continue to read the <a href="/posts/vim-command-workflow">vim command workflow</a> to learn how to move/edit text in Vim efficiently.</p>
+</section>
+
+  
+  
+  
+  <nav
+    class="mt-24 flex rounded-lg bg-black/[3%] p-1.5 text-lg dark:bg-white/[8%]"
+  >
+    
+    <a
+      class="flex w-1/2 items-center rounded-md p-6 pr-3 no-underline hover:bg-black/[2%]"
+      href="https://m4xshen.me/posts/vim-command-workflow/"
+      ><span class="mr-1.5">←</span><span>Vim Command Workflow</span></a
+    >
+    
+    
+  </nav>
+  
+
+  
+  
+  <div class="mt-24" id="disqus_thread"></div>
+  <script>
+    const disqusShortname = 'm4xshen';
+    const script = document.createElement('script');
+    script.src = 'https://' + disqusShortname + '.disqus.com/embed.js';
+    script.setAttribute('data-timestamp', +new Date());
+    document.head.appendChild(script);
+  </script>
+  
+
+  
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="opaco mx-auto flex h-[5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
+>
+  <div class="mr-auto">
+    &copy; 2023
+    <a class="link" href="https://m4xshen.me">Max Shen</a>
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >Powered by Hugo️️</a>️
+</footer>
+
+  </body>
+</html>
