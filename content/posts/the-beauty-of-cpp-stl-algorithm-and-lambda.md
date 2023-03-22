@@ -6,13 +6,13 @@ summary: "In this tutorial I refactor some C++ functions several times with STL 
 tags: ["cpp"]
 ---
 
-In this tutorial you'll learn how to refine your code with STL algorithm and lambda.
+In this tutorial, you will learn how to improve your code using STL algorithms and lambdas.
 
 ### Example Problem
 
-In this problem there is a class that stores grades about students in an English class. You need to implement 2 functions:
-- `countFail()`: returns how many students' score is below 60
-- `getAverage()`: returns the average score of the class
+In this problem, you have a class that stores grades for students in an English class, and you need to implement two functions:
+- `countFail()`: returns the number of students whose score is below 60.
+- `getAverage()`: returns the average score of the class.
 
 ```cpp
 #include <string>
@@ -34,9 +34,9 @@ public:
 
 ### countFail()
 
-Let's first think about how to implement `countFail`.
+Let's first consider how to implement countFail().
 
-The most simple way to do this:
+The simplest way to do this is:
 ```cpp
 int EnglishClass::countFail() const {
   int count = 0;
@@ -52,7 +52,7 @@ int EnglishClass::countFail() const {
 
 ### Refactor Code
 
-The code above is intuitive, but there is a better approach: using the range-based for loop provided in C++11.
+Although the above code is intuitive, there is a better approach: using the range-based for loop provided in C++11
 
 ```cpp
 int EnglishClass::countFail() const {
@@ -67,7 +67,7 @@ int EnglishClass::countFail() const {
 }
 ```
 
-In fact, the `count_if` function in `<algorithm>` returns the number of elements in the range satisfying specific condition. Don't reinvent the wheel.
+The `count_if` function in <algorithm> returns the number of elements in the range satisfying a specific condition. There is no need to reinvent the wheel.
 
 ```cpp
 bool isFail(const Student &s) {
@@ -79,9 +79,9 @@ int EnglishClass::countFail() const {
 }
 ```
 
-The third parameter is the condition for what kind of element you want to count. This can be achieved by passing a function to it.
+The third parameter of count_if is the condition for the type of element to count. This can be achieved by passing a function to it.
 
-Since the `isFail` function is only used once in `countFail`, you can rewrite it with lambda.
+Since the isFail function is only used once in `countFail()`, you can rewrite it with a lambda expression.
 
 ```cpp
 int EnglishClass::countFail() const {
@@ -90,11 +90,11 @@ int EnglishClass::countFail() const {
 }
 ```
 
-You can notice that when combining STL algorithm with lambda, the code becomes much more concise and readable.
+You can notice that by combining STL algorithms with lambdas, the code becomes much more concise and readable.
 
 ### getAverage()
 
-You can use the same concept to implement `getAverage` function:
+You can use the same concept to implement the `getAverage()` function:
 
 ```cpp
 double EnglishClass::getAverage() const {
@@ -103,10 +103,10 @@ double EnglishClass::getAverage() const {
 }
 ```
 
-In this case, you can use the `accumulate` function in `<numeric>`. But don't just sum up the students, you have to sum up the student's score with total score.
+In this case, you can use the `accumulate` function in `<numeric>`. However, don't just sum up the students; you have to sum up the student's score with the total score.
 
 ### STL Algorithm
 
-There are many STL algorithm that you can use to make your code shorter. You can also pass a lambda to it whenever the default behavior doesn't match your needs.
+There are many STL algorithms that you can use to make your code shorter. You can also pass a lambda to it whenever the default behavior doesn't match your needs.
 
 Check out the [full list](https://cplusplus.com/reference/algorithm/) of the functions to learn more.
