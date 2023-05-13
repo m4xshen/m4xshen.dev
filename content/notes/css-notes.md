@@ -199,29 +199,7 @@ Exceptions:
 - Inline styles: The style declaration inside a style attribute, take precedence over all normal styles.
 - `!important`: Override the normal rules of the cascade, including normal inline styles.
 
-### Cascade Layer
-
 ## CSS Box Model
-
-### Outer display type
-
-`display: block;`:
-- The box will break onto a new line
-- The `width` and `height` properties are respected.
-- Padding, margin and border will cause other elements to be pushed away from the box.
-- If `width` is not specified, the box will extend in the inline direction to fill the space available in its container. In most cases, the box will become as wide as its container, filling up 100% of the space available.
-
-`display: inline;`:
-- The box will not break onto a new line
-- The `width` and `height` properties will not apply.
-- Vertical padding, margins, and borders will apply but will not cause other inline boxes to move away from the box.
-- Horizontal padding, margins, and borders will apply and will cause other inline boxes to move away from the box.
-
-### Inner display type
-
-Inner display type dictates how elements **inside** that box are laid out.
-
-You can change the inner display type for example by setting `display: flex;`. The element will still use the outer display type `block` but this changes the inner display type to `flex`.
 
 ### Parts of a box
 

@@ -186,6 +186,7 @@ A pure function is a function with the following characteristics:
 React assumes that every component you write is a pure function.
 
 ### Local mutation
+
 It’s completely fine to change variables and objects that you've just created while rendering.
 
 - You should not mutate any of the inputs that your components use for rendering. That includes props, state, and context. To update the screen, “set” state instead of mutating preexisting objects.
@@ -357,3 +358,11 @@ However, even if you copy an array, you can’t mutate existing items inside of 
 When updating nested state, you need to create copies from the point where you want to update, and all the way up to the top level.
 
 [immer](https://immerjs.github.io/immer/)
+
+## Strict Mode
+
+Strict Mode enables the following development-only behaviors:
+
+- Your components will re-render an extra time to find bugs caused by impure rendering.
+- Your components will re-run Effects an extra time to find bugs caused by missing Effect cleanup.
+- Your components will be checked for usage of deprecated APIs.
