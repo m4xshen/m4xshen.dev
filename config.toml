@@ -41,6 +41,4 @@ disqusShortname = 'm4xshen'
     weight = 10
 
 [taxonomies]
-  category = "categories"
   tag = "tags"
-  series = "series"
