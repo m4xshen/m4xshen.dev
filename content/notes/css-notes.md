@@ -4,7 +4,6 @@ title: "CSS Notes"
 date: 2024-01-01
 summary: "My CSS notes"
 tags: ["template"]
-categories: ["template"]
 draft: true
 ---
 

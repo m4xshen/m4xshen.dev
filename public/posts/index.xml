@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Max Shen</title>
+    <link>https://m4xshen.me/posts/</link>
+    <description>Recent content in Posts on Max Shen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 22 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://m4xshen.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The beauty of C&#43;&#43; STL algorithm and lambda</title>
+      <link>https://m4xshen.me/posts/the-beauty-of-cpp-stl-algorithm-and-lambda/</link>
+      <pubDate>Wed, 22 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://m4xshen.me/posts/the-beauty-of-cpp-stl-algorithm-and-lambda/</guid>
+      <description>In this tutorial I refactor some C++ functions several times with STL algorithm and lambda to make them more concise and readable.</description>
+    </item>
+    
+    <item>
+      <title>Build your modern Neovim config in Lua</title>
+      <link>https://m4xshen.me/posts/build-your-modern-neovim-config-in-lua/</link>
+      <pubDate>Sun, 26 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://m4xshen.me/posts/build-your-modern-neovim-config-in-lua/</guid>
+      <description>In this tutorial you&amp;rsquo;ll learn how to build and structure your modern Neovim config in Lua. I&amp;rsquo;ll go through options, mappings, autocmds and plugins.</description>
+    </item>
+    
+    <item>
+      <title>Vim Command Workflow</title>
+      <link>https://m4xshen.me/posts/vim-command-workflow/</link>
+      <pubDate>Thu, 26 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://m4xshen.me/posts/vim-command-workflow/</guid>
+      <description>In this tutorial, I&amp;rsquo;ll share my Vim command workflow and give you some guidelines about how to move and edit text in Vim efficiently.</description>
+    </item>
+    
+    <item>
+      <title>Vim Basic Commands</title>
+      <link>https://m4xshen.me/posts/vim-basic-commands/</link>
+      <pubDate>Wed, 25 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://m4xshen.me/posts/vim-basic-commands/</guid>
+      <description>In this tutorial, you&amp;rsquo;ll learn the basic commands in Normal, Command-line and Insert mode that you need to know to work in Vim efficiently.</description>
+    </item>
+    
+  </channel>
+</rss>
