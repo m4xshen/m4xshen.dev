@@ -1,11 +1,11 @@
 +++
 title = "About Me"
 author = "Max Shen"
-summary = "Hi, my name is Max Shen, a Taiwanese college student. I love to learn new things about computer science by making projects. This blog is the place where I share my learning journey to help and inspire other people."
+summary = "Hi, I'm Max Shen, an open source developer and a generative artist. I am passionate about solving problems by making projects about Neovim and Web. I also create 3D generative arts with glsl and three.js. This blog is the place where I share my learning journey to help and inspire other people!"
 comments = false
 +++
 
-Hi, my name is Max Shen, a Taiwanese college student. I love to learn new things about computer science by making [projects](/projects). This blog is the place where I share my learning journey to help and inspire other people!
+Hi, I'm Max Shen, an open source developer and a generative artist. I am passionate about solving problems by making projects about Neovim and Web. I also create [3D generative arts](https://www.instagram.com/m4xshen.art/) with glsl and three.js. This blog is the place where I share my learning journey to help and inspire other people!
 
 ## Contact
 You can contact me through m4xshen@gmail.com
@@ -15,8 +15,8 @@ I'm familiar with C++, Lua, Javascript.
 
 ## Fun facts
 - I like to [customize my desktop](https://github.com/m4xshen/dotfiles).
-- My best typing speed in 1 minute is 115wpm.
-- I'm currently learning how to build a game without engine.
+- My best typing speed in 1 minute is 135wpm.
+- I'm currently learning front-end development.
 - I major in Electric Engineering.
 
 ## Tools
