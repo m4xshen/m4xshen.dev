@@ -1,0 +1,3 @@
+[submodule "themes/slash"]
+	path = themes/slash
+	url = https://github.com/m4xshen/slash.git
