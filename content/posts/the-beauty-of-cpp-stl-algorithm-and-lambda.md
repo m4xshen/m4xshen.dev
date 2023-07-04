@@ -11,6 +11,7 @@ In this tutorial, you will learn how to improve your code using STL algorithms a
 ### Example Problem
 
 In this problem, you have a class that stores grades for students in an English class, and you need to implement two functions:
+
 - `countFail()`: returns the number of students whose score is below 60.
 - `getAverage()`: returns the average score of the class.
 
