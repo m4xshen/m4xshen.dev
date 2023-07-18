@@ -3,6 +3,8 @@ languageCode = 'en-us'
 title = 'Max Shen Dev'
 theme = 'slash'
 
+googleAnalytics = 'G-H19K5X8RCB'
+
 [sitemap]
   changefreq = 'daily'
   filename = 'sitemap.xml'
