@@ -132,4 +132,6 @@ My approach is `dap8kp`.
 
 ## Final Words
 
+If you are using Neovim, I recommend you to try out a plugin [hardtime.nvim](https://github.com/m4xshen/hardtime.nvim), which can help you establish good command workflow and display hints for better commands.
+
 If you just start learning Vim operators, motions, it may take some times to think of what commands to use for each situation. However, If you keep practicing and using them, you'll become faster and faster. After a while, you’ll develop muscle memory for using these commands.
