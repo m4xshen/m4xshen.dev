@@ -26,4 +26,4 @@ googleAnalytics = 'G-H19K5X8RCB'
 
 [markup]
   [markup.highlight]
-    noClasses = false
+    style = 'catppuccin-mocha'
