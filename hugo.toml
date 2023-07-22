@@ -4,6 +4,7 @@ title = 'Max Shen Dev'
 theme = 'slash'
 
 googleAnalytics = 'G-H19K5X8RCB'
+disqusShortname = 'max-shen-dev'
 
 [sitemap]
   changefreq = 'daily'
