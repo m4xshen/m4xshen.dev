@@ -6,6 +6,9 @@ theme = 'slash'
 googleAnalytics = 'G-H19K5X8RCB'
 disqusShortname = 'max-shen-dev'
 
+[taxonomies]
+  tag = "tags"
+
 [sitemap]
   changefreq = 'daily'
   filename = 'sitemap.xml'
