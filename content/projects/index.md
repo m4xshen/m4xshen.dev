@@ -2,7 +2,6 @@
 title = "Projects"
 description = "Here are my 3 projects: autoclose.nvim, a minimalist autoclose plugin for Neovim written in 100% Lua, Fastodo: A Fast and modern todo list app, Brick Breaker: an online brick breaker game."
 aliases = ["project", "projects"]
-author = "Max Shen"
 comments = false
 +++
 

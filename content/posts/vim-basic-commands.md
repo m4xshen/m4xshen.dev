@@ -27,6 +27,8 @@ See more with `:h up-down-motions`.
 ```text
 k           go up
 j           go down
+-           go up and move to the first non-blank character
++ or <CR>   go down and move to the first non-blank character
 gg          go to first line
 G           go to last line
 ```
