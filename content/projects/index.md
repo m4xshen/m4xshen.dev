@@ -5,20 +5,19 @@ aliases = ["project", "projects"]
 comments = false
 +++
 
-## autoclose.nvim
-A minimalist Neovim plugin that auto pairs & closes brackets
-- [Github](https://github.com/m4xshen/autoclose.nvim)
-
-## hardtime.nvim
+### hardtime.nvim
 A Neovim plugin helping you establish good command workflow and habit
 - [GitHub](https://github.com/m4xshen/hardtime.nvim)
 
-## smartcolumn.nvim
+### autoclose.nvim
+A minimalist Neovim plugin that auto pairs & closes brackets
+- [Github](https://github.com/m4xshen/autoclose.nvim)
+
+### smartcolumn.nvim
 A Neovim plugin hiding your colorcolumn when unneeded
 - [Github](https://github.com/m4xshen/smartcolumn.nvim)
 
-## Fastodo
+### Fastodo
 A fast and modern todo list app. No account required.
-
 - [Web App](https://fastodo.netlify.app/)
 - [Github](https://github.com/m4xshen/fastodo)
