@@ -31,3 +31,7 @@ disqusShortname = 'max-shen-dev'
 [markup]
   [markup.highlight]
     style = 'github-dark'
+
+[params]
+  author = 'Max Shen'
+  intro = "I'm an open source developer and a generative artist from Taiwan, passionate about solving problems by making projects about Neovim and Web."
