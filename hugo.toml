@@ -30,4 +30,4 @@ disqusShortname = 'max-shen-dev'
 
 [markup]
   [markup.highlight]
-    style = 'catppuccin-mocha'
+    style = 'github-dark'
