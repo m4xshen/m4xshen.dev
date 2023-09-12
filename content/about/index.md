@@ -4,7 +4,7 @@ summary = "Hi, I'm Max Shen, an open source developer and a generative artist fr
 comments = false
 +++
 
-Hi, I'm Max Shen, an open source developer and a generative artist from Taiwan. I am passionate about solving problems by making [projects](/projects) about Neovim and Web. I also create [3D generative arts](https://www.instagram.com/m4xshen.art/) with glsl and three.js. This blog is the place where I share my learning journey to help and inspire other people!
+Hi, I'm Max Shen, an open source and front-end web developer from Taiwan. I am passionate about solving problems by making [projects](/projects) about Neovim and Web. This dev blog is the place where I share my learning journey to help and inspire other people!
 
 ## Contact
 
