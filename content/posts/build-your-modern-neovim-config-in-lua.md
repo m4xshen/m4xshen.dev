@@ -2,11 +2,13 @@
 author: "Max Shen"
 title: "Build your modern Neovim config in Lua"
 date: 2023-02-26
-summary: "In this tutorial you'll learn how to build and structure your modern Neovim config in Lua. I'll go through options, mappings, autocmds and plugins."
+summary: "Learn how to build and structure your modern Neovim config in Lua. This tutorial go through options, mappings, autocmds and plugins."
 tags: ["Neovim"]
 ---
 
-In this tutorial you'll learn how to build and structure your modern Neovim config in Lua. I'll go through options, mappings, autocmds and plugins. You can read along with [my configuration](https://github.com/m4xshen/dotfiles/tree/main/nvim/nvim). To learn more about what each option does, use `:h 'option name'` in Neovim.
+In this tutorial you'll learn how to build and structure a modern Neovim config in Lua. I'll go through options, mappings, autocmds and plugins. You can read along with [my configuration](https://github.com/m4xshen/dotfiles/tree/main/nvim/nvim).
+
+To learn more about what each option does, use `:h 'option name'` in Neovim.
 
 ## How Neovim loads config
 
@@ -42,7 +44,8 @@ require("config.options")
 
 When Neovim reads this line on startup, it goes through the `runtimepath`, search for `lua/` and load `/config/options.lua`. The default `runtimepath` includes includes `~/.config/nvim`. This is why we put the `lua/` inside it.
 
-Notes:
+### Notes
+
 - `.` in the module name is treated as a directory separator when searching.
 - You don't need to type the `.lua` extension.
 
@@ -65,11 +68,13 @@ Part of my [lua/config/option.lua](https://github.com/m4xshen/dotfiles/blob/main
 vim.opt.number = true
 vim.opt.relativenumber = true
 
--- use global statusline
-vim.opt.laststatus = 3
+-- width of a tab
+vim.opt.shiftwidth = 2
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
 
--- disable mouse
-vim.opt.mouse = ""
+-- use number of spaces to insert a <Tab>
+vim.opt.expandtab = true
 ```
 
 Remember to `require("config.options")` in `init.lua`.
@@ -87,19 +92,19 @@ Add a new mapping:
 vim.keymap.set({mode}, {lhs}, {rhs}, {opts})
 ```
 
-- {mode} (string or table) mode short-name
-  - "" for Normal, Visual, Select, Operator-pending mode
-  - "n" for Normal mode
-  - "v" for Visual and Select mode
-  - "s" for Select mode
-  - "x" for Visual mode
-  - "o" for Operator-pending mode
-  - "i" for Insert mode
-  - "t" for Terminal mode
-  - "!" for Insert Insert and Command-line mode
-- {lhs}: (string) left-hand side of the mapping, the keys we want to map
-- {rhs}: (string or function) right-hand side of the mapping, the keys or function we want to execute after pressing {lhs}
-- {opts}: (table) optional parameters
+- `{mode}` (string or table) mode short-name
+  - `""`: Normal, Visual, Select, Operator-pending mode
+  - `"n"`: Normal mode
+  - `"v"`: Visual and Select mode
+  - `"s"`: Select mode
+  - `"x"`: Visual mode
+  - `"o"`: Operator-pending mode
+  - `"i"`: Insert mode
+  - `"t"`: Terminal mode
+  - `"!"`: Insert Insert and Command-line mode
+- `{lhs}`: (string) left-hand side of the mapping, the keys we want to map
+- `{rhs}`: (string or function) right-hand side of the mapping, the keys or function we want to execute after pressing `{lhs}`
+- `{opts}`: (table) optional parameters
   - silent: define a mapping that will not be echoed on the command line
   - noremap: disable recursive mapping
 
@@ -159,9 +164,9 @@ At this point, you should already have a basic Neovim setup. However you can ins
 
 I use [lazy.nvim](https://github.com/folke/lazy.nvim) to manage my plugins. We need to install it first. Remember to `require("config.lazy")` in `init.lua`.
 
-```lua
--- `lua/config/lazy.lua`
+Here's my [lua/config/lazy.lua](https://github.com/m4xshen/dotfiles/blob/main/nvim/nvim/lua/config/lazy.lua):
 
+```lua
 -- install lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -182,22 +187,34 @@ require("lazy").setup("plugins")
 
 The command on the last line loads all the `.lua` file under `lua/plugins/` and the returned table will be merged and passed to `setup()`.
 
-Example:
+Example (my [lua/plugins/autoclose.lua](https://github.com/m4xshen/dotfiles/blob/main/nvim/nvim/lua/plugins/autoclose.lua)):
 
 ```lua
--- lua/plugins/autoclose.lua
-
 return {
    {
       "m4xshen/autoclose.nvim",
       opts = {
          options = {
-            disabled_filetypes = { "text", "markdown" },
+            disabled_filetypes = { "text" },
             disable_when_touch = true,
-         }
+            pair_spaces = true,
+         },
       },
    },
-   { "windwp/nvim-ts-autotag" },
+   "windwp/nvim-ts-autotag",
+   {
+      "kylechui/nvim-surround",
+      version = "*",
+      event = "VeryLazy",
+      config = function()
+         require("nvim-surround").setup({
+            keymaps = {
+               normal = "gs",
+               normal_cur = "gss",
+            },
+         })
+      end,
+   },
 }
 ```
 
@@ -217,4 +234,4 @@ Now you have a modern Neovim configuration file written in Lua! If you want to e
 
 Discover more plugins on:
 - [Awesome Neovim](https://github.com/rockerBOO/awesome-neovim)
-- [This Week in Neovim](https://this-week-in-neovim.org/)
+- [This Week in Neovim](https://dotfyle.com/this-week-in-neovim)
