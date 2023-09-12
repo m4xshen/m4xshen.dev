@@ -4,7 +4,15 @@ title = 'Max Shen Dev'
 theme = 'slash'
 
 googleAnalytics = 'G-H19K5X8RCB'
-disqusShortname = 'max-shen-dev'
+
+[params]
+  slash = 'Dev'
+  author = 'Max Shen'
+  intro = "I'm an open source and front-end web developer from Taiwan, passionate about solving problems by making projects about Neovim and Web."
+  description = "Max Shen's personal dev blog"
+  commentsRepo = 'm4xshen/m4xshen.dev'
+  github = 'https://github.com/m4xshen'
+  email = 'm4xshen@gmail.com'
 
 [taxonomies]
   tag = "tags"
@@ -31,8 +39,3 @@ disqusShortname = 'max-shen-dev'
 [markup]
   [markup.highlight]
     style = 'github-dark'
-
-[params]
-  author = 'Max Shen'
-  intro = "I'm an open source and front-end web developer from Taiwan, passionate about solving problems by making projects about Neovim and Web."
-  commentsRepo = 'm4xshen/m4xshen.dev'
