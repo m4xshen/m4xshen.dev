@@ -2,7 +2,7 @@ baseURL = 'https://m4xshen.dev'
 languageCode = 'en-us'
 title = 'Max Shen Dev'
 theme = 'slash'
-
+enableRobotsTXT = true
 googleAnalytics = 'G-H19K5X8RCB'
 
 [params]
