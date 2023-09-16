@@ -2,7 +2,7 @@
 author: "Max Shen"
 title: "Setup Next.js with Airbnb ESLint, Prettier, TypeScript and Tailwind CSS"
 date: 2023-09-10
-summary: "Learn how to setup a Next.js project with Airbnb ESLint, Prettier, Typescript and Tailwind CSS in a correct way."
+summary: "Learn how to setup a Next.js project with Airbnb ESLint, Prettier, Typescript and Tailwind CSS in a correct way in this tutorial."
 tags: ["web", "frontend"]
 ---
 
