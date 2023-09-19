@@ -2,7 +2,7 @@
 author: "Max Shen"
 title: "The beauty of C++ STL algorithm and lambda"
 date: 2023-03-22
-summary: "In this tutorial I refactor some C++ functions several times with STL algorithm and lambda to make them more concise and readable."
+summary: "Learn how to refactor C++ program with STL algorithm and lambda to make them more concise and readable in this tutorial."
 tags: ["cpp"]
 ---
 

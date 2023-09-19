@@ -1,7 +1,7 @@
 ---
 title: "Vim Command Workflow"
 date: 2023-01-26
-summary: "In this tutorial, I'll share my Vim command workflow and give you some guidelines about how to move and edit text in Vim efficiently."
+summary: "Learn Vim command workflow and how to move and edit text in Vim efficiently in this tutorial."
 author: "Max Shen"
 tags: ["vim", "workflow"]
 ---

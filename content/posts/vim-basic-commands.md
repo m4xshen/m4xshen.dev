@@ -2,7 +2,7 @@
 author: "Max Shen"
 title: "Vim Basic Commands"
 date: 2023-01-25
-summary: "In this tutorial, you'll learn the basic commands in Normal, Command-line and Insert mode that you need to know to work in Vim efficiently."
+summary: "Learn the basic commands in Normal, Command-line and Insert mode that you need to know to work in Vim efficiently in this tutorial."
 tags: ["vim"]
 ---
 
