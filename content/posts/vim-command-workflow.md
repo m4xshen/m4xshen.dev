@@ -1,5 +1,5 @@
 ---
-title: "Practical Vim Command Workflow"
+title: "Practical Vim command workflow"
 date: 2023-01-26
 summary: "Master the art of efficient text navigation and editing in Vim with this comprehensive command workflow tutorial. Explore key commands and practical examples to enhance your productivity in Vim."
 author: "Max Shen"
@@ -19,7 +19,7 @@ Here are some general rules of my workflow.
 5. Use `f F t T 0 ^ $ , ;` for mid long distance horizontal movement.
 6. Use `operator + motion/text-object` (eg: `ci{ d5j`) whenever possible.
 
-If you are not familiar with some of these concepts, please learn about the [vim basic commands](/posts/vim-basic-commands) first.
+If you are not familiar with some of these concepts, please learn about the [Essential Vim commands for efficient text editing](/posts/vim-basic-commands) first.
 
 ## Examples
 

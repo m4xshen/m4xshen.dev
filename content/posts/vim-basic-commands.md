@@ -1,6 +1,6 @@
 ---
 author: "Max Shen"
-title: "Essential Vim Commands for Efficient Text Editing"
+title: "Essential Vim commands for efficient text editing"
 date: 2023-01-25
 summary: "Master the essential Vim commands for efficient text editing. Learn Normal, Insert, and Command-line modes, navigation, editing, and more in this comprehensive Vim tutorial."
 tags: ["vim"]
@@ -209,4 +209,4 @@ N			    repeat the latest `/` or `?` in opposite direction
 
 ## Final Words
 
-Remember all these command takes some time. If you are already familiar with these commands, you can continue to read the [vim command workflow](/posts/vim-command-workflow) to learn how to move/edit text in Vim efficiently.
+Remember all these command takes some time. If you are already familiar with these commands, you can continue to read the [Practical Vim command workflow](/posts/vim-command-workflow) to learn how to move/edit text in Vim efficiently.
