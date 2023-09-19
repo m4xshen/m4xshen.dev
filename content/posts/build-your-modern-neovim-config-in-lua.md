@@ -2,7 +2,7 @@
 author: "Max Shen"
 title: "Build your modern Neovim config in Lua"
 date: 2023-02-26
-summary: "Learn how to build and structure your modern Neovim config in Lua. This tutorial go through options, mappings, autocmds and plugins."
+summary: "Learn how to build a modern Neovim configuration in Lua with options, mappings, autocmds, and plugins. Follow a structured approach to enhance your Neovim experience."
 tags: ["Neovim"]
 ---
 

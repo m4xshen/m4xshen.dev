@@ -1,8 +1,8 @@
 ---
 author: "Max Shen"
-title: "Vim Basic Commands"
+title: "Essential Vim Commands for Efficient Text Editing"
 date: 2023-01-25
-summary: "Learn the basic commands in Normal, Command-line and Insert mode that you need to know to work in Vim efficiently in this tutorial."
+summary: "Master the essential Vim commands for efficient text editing. Learn Normal, Insert, and Command-line modes, navigation, editing, and more in this comprehensive Vim tutorial."
 tags: ["vim"]
 ---
 
