@@ -1,5 +1,5 @@
 ---
-title: "Vim Command Workflow"
+title: "Practical Vim Command Workflow"
 date: 2023-01-26
 summary: "Master the art of efficient text navigation and editing in Vim with this comprehensive command workflow tutorial. Explore key commands and practical examples to enhance your productivity in Vim."
 author: "Max Shen"
