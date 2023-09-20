@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/posts/vim-basic-commands/",
+      "destination": "/posts/essential-vim-commands-for-efficient-text-editing",
+      "permanent": true
+    },
+    {
+      "source": "/posts/vim-command-workflow/",
+      "destination": "/posts/practical-vim-commands-workflow",
+      "permanent": true
+    }
+  ]
+}
