@@ -2,7 +2,7 @@
 author: "Max Shen"
 title: "Develop a Neovim plugin in Lua"
 date: 2023-09-15
-summary: "Learn how to develop a Neovim plugin in Lua. Explore the plugin's structure, understand the use of Lua modules, and create a simple plugin."
+summary: "Learn how to develop a Neovim plugin in Lua. Understand the structure of Neovim plugin, Lua module, and create a simple plugin."
 tags: ["Neovim", "Lua"]
 ---
 
