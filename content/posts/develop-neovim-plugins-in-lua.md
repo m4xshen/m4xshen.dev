@@ -177,8 +177,8 @@ Or if you are using lazy.nvim:
 }
 ```
 
-Check out the [final code](https://github.com/m4xshen/example.nvim).
+Check out the [complete source code](https://github.com/m4xshen/example.nvim).
 
 ## Final Words
 
-Getting started is the hardest part of developing a Neovim plugin first time. I hope this tutorial helps you out. If you have any questions, feel free to ask in the comment section.
+Getting started is the hardest part when developing a Neovim plugin first time. I hope this tutorial helps you out. If you have any questions, feel free to ask in the comment section.
