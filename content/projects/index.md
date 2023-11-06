@@ -5,19 +5,23 @@ aliases = ["project", "projects"]
 comments = false
 +++
 
+### repohistory
+
+A website for you to analyze and track GitHub repository traffic history longer than 14 days
+- [GitHub](https://github.com/repohistory/repohistory)
+- [Website](https://repohistory.com)
+
 ### hardtime.nvim
+
 A Neovim plugin helping you establish good command workflow and habit
 - [GitHub](https://github.com/m4xshen/hardtime.nvim)
 
 ### autoclose.nvim
+
 A minimalist Neovim plugin that auto pairs & closes brackets
 - [Github](https://github.com/m4xshen/autoclose.nvim)
 
 ### smartcolumn.nvim
+
 A Neovim plugin hiding your colorcolumn when unneeded
 - [Github](https://github.com/m4xshen/smartcolumn.nvim)
-
-### Fastodo
-A fast and modern todo list app. No account required.
-- [Web App](https://fastodo.netlify.app/)
-- [Github](https://github.com/m4xshen/fastodo)
