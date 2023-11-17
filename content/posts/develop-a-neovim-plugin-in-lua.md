@@ -6,6 +6,8 @@ summary: "Learn how to develop a Neovim plugin in Lua. Understand the structure 
 tags: ["Neovim", "Lua"]
 ---
 
+🚀 Before we dive into the main topic, I want to share a recent project of mine: [repohistory](https://github.com/repohistory/repohistory). Designed for GitHub users, it extends repo traffic history tracking well beyond the usual 14-day period, offering deeper project insights. Now, let’s delve into today’s focus…
+
 ## Setup project
 
 Before developing the plugin, we need to set it up. There are two different approaches:

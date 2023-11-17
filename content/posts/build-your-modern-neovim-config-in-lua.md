@@ -6,6 +6,8 @@ summary: "Learn how to build a modern Neovim configuration in Lua with options, 
 tags: ["Neovim"]
 ---
 
+🚀 Before we dive into the main topic, I want to share a recent project of mine: [repohistory](https://github.com/repohistory/repohistory). Designed for GitHub users, it extends repo traffic history tracking well beyond the usual 14-day period, offering deeper project insights. Now, let’s delve into today’s focus…
+
 In this tutorial you'll learn how to build and structure a modern Neovim config in Lua. I'll go through options, mappings, autocmds and plugins. You can read along with [my configuration](https://github.com/m4xshen/dotfiles/tree/main/nvim/nvim).
 
 To learn more about what each option does, use `:h 'option name'` in Neovim.
