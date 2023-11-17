@@ -6,8 +6,6 @@ summary: "Set up Next.js with Airbnb ESLint, Prettier, TypeScript, and Tailwind 
 tags: ["web", "frontend"]
 ---
 
-🚀 Before we dive into the main topic, I want to share a recent project of mine: [repohistory](https://github.com/repohistory/repohistory). Designed for GitHub users, it extends repo traffic history tracking well beyond the usual 14-day period, offering deeper project insights. Now, let’s delve into today’s focus…
-
 In this tutorial you'll learn how to setup a Next.js project with Airbnb ESLint, Prettier, Typescript and Tailwind CSS in a correct way so that you don't need to turn off a lot of rules inside `.eslintrc.json` anymore.
 
 ## Create Project
