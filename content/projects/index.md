@@ -7,7 +7,7 @@ comments = false
 
 ### repohistory
 
-A website for you to analyze and track GitHub repository traffic history longer than 14 days
+An open-source platform for tracking GitHub repo traffic history longer than 14 days. 
 - [GitHub](https://github.com/repohistory/repohistory)
 - [Website](https://repohistory.com)
 
