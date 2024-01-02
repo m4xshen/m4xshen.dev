@@ -42,7 +42,7 @@ The first line of `init.lua`:
 require("config.options")
 ```
 
-When Neovim reads this line on startup, it goes through the `runtimepath`, search for `lua/` and load `/config/options.lua`. The default `runtimepath` includes includes `~/.config/nvim`. This is why we put the `lua/` inside it.
+When Neovim reads this line on startup, it goes through the `runtimepath`, search for `lua/` and load `/config/options.lua`. The default `runtimepath` includes `~/.config/nvim`. This is why we put the `lua/` inside it.
 
 ### Notes
 
