@@ -1,0 +1,25 @@
+---
+import HeaderLink from './HeaderLink.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<header>
+	<nav class="flex items-center justify-between h-20 px-5 sm:px-10 lg:px-20 xl:px-60 border-b bg-[#0a0a0b] text-white border-b-[#374151] font-mono">
+    <div class="flex items-center">
+      <img
+        src="/avatar.jpg"
+        class="h-12 w-12 rounded-full border border-[#374151]"
+      />
+      <svg height="32" width="32" viewBox="0 0 32 32">
+        <path d="M22 5L9 28" stroke="#374151"></path>
+      </svg>
+      <a href="/" class="text-white text-3xl font-semibold">
+        {SITE_TITLE}
+      </a>
+    </div>
+    <div class="flex gap-10">
+      <HeaderLink href="/blog">Blog</HeaderLink>
+      <HeaderLink href="/about">About</HeaderLink>
+    </div>
+  </nav>
+</header>

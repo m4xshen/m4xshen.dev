@@ -1,0 +1,23 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="en" class="bg-black text-white">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <Header title={SITE_TITLE} />
+    <main class="self-center mt-20">
+      <h1 class="my-4 text-5xl font-mono font-bold">Hi, I'm Max Shen!</h1>
+      <p class="text-lg font-medium leading-5 font-sans w-full max-w-2xl mt-10 mb-20">
+        I'm an open source and front-end web developer from Taiwan, passionate about solving problems by making projects about Neovim and Web.
+      </p>
+    </main>
+    <Footer />
+  </body>
+</html>
