@@ -1,0 +1,13 @@
+---
+import Base from '../layouts/Base.astro';
+
+const { title, description } = Astro.props.frontmatter;
+---
+
+<Base title={title} description={description}>
+  <div class="prose prose-invert my-20 mx-auto">
+    <h1>{title}</h1>
+    <hr />
+    <slot />
+  </div>
+</Base>

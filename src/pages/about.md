@@ -1,11 +1,10 @@
 ---
-layout: "../layouts/BlogPost.astro"
-title: "About"
-pubDate: "2024-01-01"
-description: "hi"
+layout: "../layouts/About.astro"
+title: "About Me"
+description: "Hi, I'm Max Shen, an open source and web developer from Taiwan. I am passionate about solving problems by making projects about Neovim and Web. This dev blog is the place where I share my learning journey to help and inspire other people!"
 ---
 
-Hi, I'm Max Shen, an open source and front-end web developer from Taiwan. I am passionate about solving problems by making [projects](/projects) about Neovim and Web. This dev blog is the place where I share my learning journey to help and inspire other people!
+Hi, I'm Max Shen, an open source and web developer from Taiwan. I am passionate about solving problems by making projects about Neovim and Web. This dev blog is the place where I share my learning journey to help and inspire other people!
 
 ## Contact
 

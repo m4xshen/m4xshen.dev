@@ -16,10 +16,10 @@ const posts = (await getCollection('blog')).sort(
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
-  <body class="flex flex-col min-h-screen">
+  <body class="w-1/2 mx-auto flex flex-col min-h-screen">
 		<Header />
 		<main>
-			<section class="w-1/2 mx-auto">
+			<section>
 				<ul class="flex flex-col gap-5 py-10">
 					{
 						posts.map((post) => (
