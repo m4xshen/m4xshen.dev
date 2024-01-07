@@ -10,18 +10,21 @@ const posts = (await getCollection('blog')).sort(
 
 <Base>
   <section class="prose prose-invert">
-    <div class="flex flex-col">
+    <div class="flex flex-col gap-10 my-10">
       {
       posts.map((post) => (
         <a
           href={`/posts/${post.slug}/`}
-          class="flex flex-col justify-between no-underline hover:scale-[101%] transition"
+          class="flex flex-col justify-between no-underline"
         >
-          <h3 class="font-extrabold text-3xl font-sans transition-colors">
+          <h1
+            class="text-3xl transition-colors mb-2"
+            transition:name={`title-${post.data.title}`}
+          >
             {post.data.title}
-          </h3>
+          </h1>
           <div class="text-sm text-gray-400 flex-shrink-0">
-            <FormattedDate date={post.data.pubDate} />
+            <FormattedDate date={post.data.pubDate} name={`date-${post.data.title}`} />
           </div>
         </a>
       ))

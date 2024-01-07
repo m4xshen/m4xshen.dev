@@ -8,15 +8,11 @@ const { title, description, pubDate } = Astro.props;
 <Base title={title} description={description}>
   <article class="prose prose-invert mx-auto my-20">
     <div>
-      {
-      title && (
-        <h1>{title}</h1>
-      )
-      }
-      {pubDate &&
-        <FormattedDate date={pubDate} />
-      }
-        <hr />
+      <h1 class="text-3xl" transition:name={`title-${title}`}>{title}</h1>
+      <div class="text-sm text-gray-400 flex-shrink-0">
+        <FormattedDate date={pubDate} name={`date-${title}`} />
+      </div>
+      <hr />
       <slot />
     </div>
   </article>
