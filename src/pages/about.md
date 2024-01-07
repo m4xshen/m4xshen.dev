@@ -1,10 +1,10 @@
 ---
 layout: "../layouts/About.astro"
 title: "About Me"
-description: "Hi, I'm Max Shen, an open source and web developer from Taiwan. I am passionate about solving problems by making projects about Neovim and Web. This dev blog is the place where I share my learning journey to help and inspire other people!"
+description: "Hi, I'm Max Shen, an open source developer and generative artist from Taiwan. I am passionate about solving problems by making projects about Neovim and Web. This dev blog is the place where I share my learning journey to help and inspire other people!"
 ---
 
-Hi, I'm Max Shen, an open source and web developer from Taiwan. I am passionate about solving problems by making projects about Neovim and Web. This dev blog is the place where I share my learning journey to help and inspire other people!
+Hi, I'm Max Shen, an open source developer and generative artist from Taiwan. I am passionate about solving problems by making projects about Neovim and Web. This dev blog is the place where I share my learning journey to help and inspire other people!
 
 ## Contact
 
@@ -14,15 +14,15 @@ Hi, I'm Max Shen, an open source and web developer from Taiwan. I am passionate 
 ## Skills
 
 - Languages: C++, Lua, Go, Javascript, Typescript
-- Libraries: React.js, Three.js
-- Frameworks: Tailwind CSS, Next.js, Hugo
+- Libraries: React.js, Three.js, Next UI
+- Frameworks: Tailwind CSS, Next.js, Astro
 - Others: Git
 
 ## Fun facts
 
 - I like to [customize my desktop](https://github.com/m4xshen/dotfiles).
 - My best typing speed in 1 minute is 135wpm.
-- I'm currently learning front-end development.
+- I'm currently building my own SaaS.
 - I major in Electric Engineering.
 
 ## Tools
