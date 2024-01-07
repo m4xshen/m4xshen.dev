@@ -15,9 +15,9 @@ const posts = (await getCollection('blog')).sort(
       posts.map((post) => (
         <a
           href={`/posts/${post.slug}/`}
-          class="flex flex-col justify-between no-underline"
+          class="flex flex-col justify-between no-underline hover:scale-[101%] transition"
         >
-          <h3 class="font-extrabold text-3xl font-sans hover:text-[#a5d6ff] transition-colors">
+          <h3 class="font-extrabold text-3xl font-sans transition-colors">
             {post.data.title}
           </h3>
           <div class="text-sm text-gray-400 flex-shrink-0">
