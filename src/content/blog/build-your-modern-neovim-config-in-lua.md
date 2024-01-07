@@ -20,7 +20,7 @@ To avoid this, separate files to multiple modules and then load them in the `ini
 
 My Neovim config structure:
 
-```text
+```plaintext
 ~/.config/nvim
 |-- init.lua
 |-- lua/

@@ -58,7 +58,7 @@ Now the plugin is setup and installed. Let's learn about its folder structure.
 
 At the root of your plugin, create a structure like this (replace the `example` with your plugin name):
 
-```text
+```plaintext
 example.nvim/
 ├── lua
 │   └── example

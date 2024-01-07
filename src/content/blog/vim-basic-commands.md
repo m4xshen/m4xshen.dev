@@ -22,7 +22,7 @@ To begin with, let's learn how to move in Vim.
 
 See more with `:h up-down-motions`.
 
-```text
+```plaintext
 k           go up
 j           go down
 -           go up and move to the first non-blank character
@@ -35,7 +35,7 @@ G           go to last line
 
 See more with `:h left-right-motions`.
 
-```text
+```plaintext
 h           go left
 l           go right
 0           go to the first character of the line
@@ -53,7 +53,7 @@ T{char}		go till after the occurrence of {char} to the left
 
 See more with `:h word-motions`.
 
-```text
+```plaintext
 w			go one word forward
 W			go one word forward, ignore symbol
 e			go forward to the end of word
@@ -66,7 +66,7 @@ gE			go backward to the end of word, ignore symbol
 
 After being able to move in Vim, let's learn how to editing text. The pattern of editing looks like this:
 
-```text
+```plaintext
 operator + motion or text-object
 ```
 
@@ -74,7 +74,7 @@ operator + motion or text-object
 
 See more with `:h operator`.
 
-```text
+```plaintext
 d           delete
 y           yank(copy) into register
 (after delete or yank you can use `p` to paste)
@@ -85,7 +85,7 @@ c           change(delete and start insert)
 
 Some examples of operator + motion:
 
-```text
+```plaintext
 cw          change a word
 dt(         delete till the first occurrence of (
 y5j         yank to 5 lines down
@@ -93,7 +93,7 @@ y5j         yank to 5 lines down
 
 Exceptions:
 
-```text
+```plaintext
 dd          delete current line
 D           delete until the end of the line
 yy          yank current line
@@ -107,7 +107,7 @@ C           change until the end of the line
 
 See more with `:h text-objects`.
 
-```text
+```plaintext
 iw          inside word
 aw          around word
 
@@ -124,7 +124,7 @@ a{          around {}
 
 Some examples of operator + text-object:
 
-```text
+```plaintext
 ci"         change inside ""
 dap         delete around paragraph
 =i{         format the code inside {}
@@ -148,7 +148,7 @@ You can use `ci"` to change the text inside "" pair although your cursor is at t
 
 See more with `:h scrolling`.
 
-```text
+```plaintext
 CTRL-U       scroll window half a screen upwards
 CTRL-D       scroll window half a screen downwards
 CTRL-B       scroll window a full screen upwards
@@ -159,7 +159,7 @@ CTRL-F       scroll window a full screen downwards
 
 See more with `:h inserting`.
 
-```text
+```plaintext
 i           insert text before the cursor
 I           insert text before the first non-blank in the line
 a           append text after the cursor
@@ -174,7 +174,7 @@ You can add number before command to execute it [count] times.
 
 Examples: `5k` will go up 5 lines
 
-```text
+```plaintext
 s           delete character and start insert (synonym for cl)
 S           delete line and start insert (synonym of cc)
 x           delete character under the cursor
@@ -188,7 +188,7 @@ ZZ          save current file and quit
 
 ## Insert Mode
 
-```text
+```plaintext
 <ESC>       leave insert mode
 i_CTRL-O    execute one command in Normal mode and then return to Insert mode
 ```
@@ -197,7 +197,7 @@ i_CTRL-O    execute one command in Normal mode and then return to Insert mode
 
 (`<CR>` means enter)
 
-```text
+```plaintext
 :w<CR>          save the current file
 :q<CR>          quit
 :q!<CR>         quit without checking for changes (same as ZQ)
