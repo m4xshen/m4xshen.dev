@@ -12,7 +12,6 @@
   "dependencies": {
     "@astrojs/check": "^0.3.4",
     "@astrojs/mdx": "^2.0.3",
-    "@astrojs/partytown": "^2.0.3",
     "@astrojs/rss": "^4.0.1",
     "@astrojs/sitemap": "^3.0.4",
     "@astrojs/tailwind": "^5.1.0",
