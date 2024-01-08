@@ -20,6 +20,42 @@ const { title, description } = Astro.props;
     <main>
       <slot />
     </main>
+    <script>
+    function loadGiscus() {
+      const existingScript = document.getElementById('giscus-script');
+      if (existingScript) {
+        existingScript.remove();
+      }
+
+      if (!window.location.pathname.startsWith('/posts/')) {
+        return;
+      }
+
+      const script = document.createElement('script');
+      script.id = 'giscus-script';
+      script.src = "https://giscus.app/client.js";
+      script.setAttribute('data-repo', 'm4xshen/m4xshen.dev');
+      script.setAttribute('data-repo-id', 'R_kgDOIwxuSw');
+      script.setAttribute('data-category', 'Announcements');
+      script.setAttribute('data-category-id', 'DIC_kwDOIwxuS84CcRI1');
+      script.setAttribute('data-mapping', 'pathname');
+      script.setAttribute('data-strict', '0');
+      script.setAttribute('data-reactions-enabled', '1');
+      script.setAttribute('data-emit-metadata', '0');
+      script.setAttribute('data-input-position', 'bottom');
+      script.setAttribute('data-theme', 'dark_tritanopia');
+      script.setAttribute('data-lang', 'en');
+      script.crossOrigin = 'anonymous';
+      script.async = true;
+
+      const mainElement = document.querySelector('main');
+      if (mainElement) {
+        mainElement.appendChild(script);
+      }
+    }
+
+    document.addEventListener('astro:page-load', loadGiscus);
+    </script>
     <Footer />
   </body>
 </html>
