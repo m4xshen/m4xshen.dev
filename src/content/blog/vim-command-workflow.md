@@ -90,7 +90,7 @@ My approach is `<ESC>yy4jpci'Date<ESC>`.
 - `yy`: Yank current line.
 - `4j`: Go down 4 line.
 - `p`: Paste the line we just yanked.
-- `ci'Date<ESC>`: Change the content inside '', type `Date` and leave Insert mode.
+- `ci'Date<ESC>`: Change the content inside single quote, type `Date` and leave Insert mode.
 
 ![situation 3](https://user-images.githubusercontent.com/74842863/215339692-810b79ea-fe3d-41f9-b3d0-dcff3cb11810.gif)
 
