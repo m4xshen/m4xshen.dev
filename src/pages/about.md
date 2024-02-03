@@ -23,7 +23,7 @@ Hi, I'm Max Shen, an open source developer and generative artist from Taiwan. I 
 
 - I like to [customize my desktop](https://github.com/m4xshen/dotfiles).
 - My best typing speed in 1 minute is 135wpm.
-- I'm currently building my own SaaS.
+- I'm currently building my own SaaS: [Flowmodor](https://flowmodor.com).
 - I major in Electric Engineering.
 
 ## Tools
