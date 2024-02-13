@@ -1,8 +1,9 @@
 ---
 import FormattedDate from '../components/FormattedDate.astro';
+import Newsletter from '../components/Newsletter.astro';
 import Base from '../layouts/Base.astro';
 
-const { title, description, pubDate } = Astro.props;
+const { title, description, pubDate, newsletter } = Astro.props;
 ---
 
 <Base title={title} description={description}>
@@ -16,6 +17,9 @@ const { title, description, pubDate } = Astro.props;
       <slot />
     </div>
   </article>
+  {newsletter && (
+    <Newsletter />
+  )}
   <script src="https://giscus.app/client.js"
           data-repo="m4xshen/m4xshen.dev"
           data-repo-id="R_kgDOIwxuSw"
