@@ -99,7 +99,7 @@ Now that you understand the basic OAuth 2.0 code grant flow, let's review everyt
 
 ## PKCE
 
-The basic authorization flow works well, but it has a vulnerability: if attackers manage to intercept the `code`, they can exchange it for an `access_token`. This poses a serious security risk, potentially allowing the attacker to access protected resources as the user.
+The basic authorization flow works well, but it has a vulnerability: if an attacker manages to intercept the `code`, they can exchange it for an `access_token`. This poses a serious security risk, potentially allowing the attacker to access protected resources as the user.
 
 This is where PKCE (Proof Key for Code Exchange) comes into play. PKCE is an extension to the basic authorization flow to prevent this kind of attack.
 
@@ -115,7 +115,7 @@ Next, you'll include additional parameters in the previous steps to integrate PK
 When requesting authorization, include these additional parameters:
 
 - `code_challenge=XXXXXXXXX`: The code challenge generated as previously described
-- `code_challenge_method=S256`: This can be either plain or S256, indicating whether the challenge is the plain `code_verifier` string or a SHA256 hash of it.
+- `code_challenge_method=S256`: This can be either `plain` or `S256`, indicating whether the challenge is the plain `code_verifier` string or a SHA256 hash of it.
 
 The authorization server will associate `code_challenge` and `code_challenge_method` with the `code` it generates.
 
@@ -127,8 +127,8 @@ When exchanging the `code` for an `access_token`, add the following parameter:
 
 Since the `code_challenge` and `code_challenge_method` were associated with the `code` initially, the server should already know which method to use to verify the `code_verifier`.
 
-- For the plain method, the authorization server simply verifies that the provided `code_verifier` matches the previously stored `code_challenge`.
-- For the S256 method, the authorization server will hash the provided `code_verifier` using SHA256 and then compare it to the stored `code_challenge`.
+- For the `plain` method, the authorization server simply verifies that the provided `code_verifier` matches the previously stored `code_challenge`.
+- For the `S256` method, the authorization server will hash the provided `code_verifier` using SHA256 and then compare it to the stored `code_challenge`.
 
 If the verification is successful and the values match, the server issues an `access_token`. If they don't match, the request is denied.
 
@@ -136,4 +136,4 @@ This mechanism ensures that even if an attacker intercepts the `code`, they cann
 
 ## Conclusion
 
-In summary, understanding OAuth 2.0 code grant flow is essential for securely managing user data in web applications. This guide has walked you through setting up your application, obtaining authorization, securing access tokens, and using PKCE to protect against interception attacks. By adhering to these steps, you ensure your application's security and maintain user trust.
+In summary, the OAuth 2.0 code grant flow is a crucial process for you to understand and implement when building web applications that require access to user data from third-party services. By following the outlined steps and incorporating PKCE, you can securely authenticate users and access necessary resources while protecting against common security vulnerabilities. 
