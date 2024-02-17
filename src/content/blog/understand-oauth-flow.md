@@ -1,6 +1,6 @@
 ---
 title: "Understand OAuth 2.0 flow"
-pubDate: 2024-03-01
+pubDate: 2024-02-17
 description: "Discover the essentials of OAuth 2.0, from setting up your application to securing user data with access tokens and PKCE. This beginner's guide simplifies the flow, ensuring your web applications are secure and user-friendly."
 newsletter: true
 ---
