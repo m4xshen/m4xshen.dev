@@ -1,11 +1,11 @@
 ---
-title: "Understand OAuth 2.0 flow"
+title: "Understand OAuth 2.0 code grant flow"
 pubDate: 2024-02-17
-description: "Discover the essentials of OAuth 2.0, from setting up your application to securing user data with access tokens and PKCE. This beginner's guide simplifies the flow, ensuring your web applications are secure and user-friendly."
+description: "Discover the essentials of OAuth 2.0 code grant, from setting up your application to securing user data with access tokens and PKCE. This beginner's guide simplifies the flow, ensuring your web applications are secure and user-friendly."
 newsletter: true
 ---
 
-If you're developing a web application that relies on a third-party API, chances are you're using OAuth 2.0, a protocol provided by the service. You might not completely understand what this is or how it works, though. In this post, I'm going to make it clear and explain the whole OAuth 2.0 flow to you.
+If you're building a web application that uses a third-party API, you're likely using the OAuth 2.0 code grant to obtain user permissions. However, its workings might not be entirely clear to you. In this post, I'll demystify the process and guide you through the entire OAuth 2.0 code grant flow.
 
 ## Setting up your application
 
@@ -15,7 +15,7 @@ You'll be asked for some simple details about your application, like its name, w
 
 After this, you'll get a `client_id` and `client_secret`. These are important because you'll use them in the OAuth 2.0 process.
 
-## Complete OAuth 2.0 flow
+## Complete OAuth 2.0 code grant flow
 
 Once you've set up your application, you're ready to start using OAuth 2.0. Here's what the complete process looks like:
 
@@ -35,7 +35,7 @@ The first step of the web flow is to request authorization from the user. This i
 GET https://example-service.com/login/oauth/authorize
 ```
 
-This endpoint usually takes the following input parameters.
+This endpoint usually takes the following query parameters.
 
 - `client_id`: This is your app's unique identifier, which you receive after registering your app with the service.
 - `response_type`: This should be set to code, indicating that you're asking for an authorization code in response.
@@ -59,19 +59,19 @@ Here's a flowchart that outlines this first step:
 
 ### 2. Exchange authorization code for access token
 
-The second phase involves exchanging the authorization code you've received for an access token. This is done by making a POST request to the service's authorization server:
+The second phase involves exchanging the `code` you've received for an `access_token`. This is done by making a POST request to the service's authorization server:
 
 ```
 POST https://example-service.com/login/oauth/access_token
 ```
 
-This endpoint usually takes the following input parameters.
+This endpoint usually takes the following query parameters.
 
 - `grant_type`: This should be set to "authorization_code".
 - `code`: The authorization code that you received.
 - `client_id`: The unique identifier for your app, provided when you registered with the service.
 - `client_secret`: A secret key you received upon registering your app, meant to authenticate your request.
-- `redirect_uri` (optional): If you included a redirect URL in the initial authorization request, it must also be included here and match exactly.
+- `redirect_uri` (optional): If you included a redirect URI in the initial authorization request, it must also be included here and match exactly.
 
 The service's response to this POST request will include the `access_token` you'll use in the final step.
 
@@ -81,7 +81,7 @@ Here's a flowchart summarizing this step:
 
 ### 3. Use access token to get user resource through API
 
-Once you have the access_token, you might save it for later to make API calls. Include it in your request headers like this:
+Once you have the `access_token`, you might save it for later to make API calls. Include it in your request headers like this:
 
 ```javascript
 Authorization: `Bearer ${access_token}`
@@ -93,13 +93,13 @@ Here's a flowchart illustrating this step:
 
 ![step 3 diagram](/images/step_3_diagram.png)
 
-Now that you understand the basic OAuth 2.0 flow, let's review everything with a diagram showing the full process:
+Now that you understand the basic OAuth 2.0 code grant flow, let's review everything with a diagram showing the full process:
 
 ![step 3 diagram](/images/complete_diagram.png)
 
 ## PKCE
 
-The basic authorization flow works well, but it has a vulnerability: if an attacker manages to intercept the `code`, they can exchange it for an `access_token`. This poses a serious security risk, potentially allowing the attacker to access protected resources as the user.
+The basic authorization flow works well, but it has a vulnerability: if attackers manage to intercept the `code`, they can exchange it for an `access_token`. This poses a serious security risk, potentially allowing the attacker to access protected resources as the user.
 
 This is where PKCE (Proof Key for Code Exchange) comes into play. PKCE is an extension to the basic authorization flow to prevent this kind of attack.
 
@@ -121,7 +121,7 @@ The authorization server will associate `code_challenge` and `code_challenge_met
 
 ### 2. Exchange authorization code for access token
 
-When exchanging the authorization code for an access token, add the following parameter:
+When exchanging the `code` for an `access_token`, add the following parameter:
 
 - `code_verifier`: The code verifier for the PKCE request, that the app originally generated before the authorization request.
 
@@ -130,10 +130,10 @@ Since the `code_challenge` and `code_challenge_method` were associated with the 
 - For the plain method, the authorization server simply verifies that the provided `code_verifier` matches the previously stored `code_challenge`.
 - For the S256 method, the authorization server will hash the provided `code_verifier` using SHA256 and then compare it to the stored `code_challenge`.
 
-If the verification is successful and the values match, the server issues an access_token. If they don't match, the request is denied.
+If the verification is successful and the values match, the server issues an `access_token`. If they don't match, the request is denied.
 
-This mechanism ensures that even if an attacker intercepts the authorization code, they cannot exchange it for an `access_token` without the `code_verifier`.
+This mechanism ensures that even if an attacker intercepts the `code`, they cannot exchange it for an `access_token` without the `code_verifier`.
 
 ## Conclusion
 
-In summary, mastering OAuth 2.0 is essential for securely managing user data in web applications. This guide has walked you through setting up your application, obtaining authorization, securing access tokens, and using PKCE to protect against interception attacks. By adhering to these steps, you ensure your application's security and maintain user trust.
+In summary, understanding OAuth 2.0 code grant flow is essential for securely managing user data in web applications. This guide has walked you through setting up your application, obtaining authorization, securing access tokens, and using PKCE to protect against interception attacks. By adhering to these steps, you ensure your application's security and maintain user trust.
