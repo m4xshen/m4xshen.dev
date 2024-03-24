@@ -2,7 +2,6 @@
 title: "Tailwind CSS under the hood"
 pubDate: 2024-01-31
 description: "Learn how Tailwind CSS works under the hood by learning the concept of utility-first and how it extracts the class names from files."
-newsletter: true
 ---
 
 Tailwind CSS defines itself on its official site as:

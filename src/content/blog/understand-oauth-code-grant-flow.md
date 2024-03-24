@@ -2,7 +2,6 @@
 title: "Understand OAuth 2.0 code grant flow"
 pubDate: 2024-02-17
 description: "Discover the essentials of OAuth 2.0 code grant, from setting up your application to securing user data with access tokens and PKCE. This beginner's guide simplifies the flow, ensuring your web applications are secure and user-friendly."
-newsletter: true
 ---
 
 If you're building a web application that uses a third-party API, you're likely using the OAuth 2.0 code grant to obtain user permissions. However, its workings might not be entirely clear to you. In this post, I'll demystify the process and guide you through the entire OAuth 2.0 code grant flow.
