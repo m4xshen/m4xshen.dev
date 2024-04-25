@@ -4,6 +4,8 @@ pubDate: "2023-09-15"
 description: "Learn how to develop a Neovim plugin in Lua. Understand the structure of Neovim plugin, Lua module, and create a simple plugin."
 ---
 
+As the author of [hardtime.nvim](https://github.com/m4xshen/hardtime.nvim), [autoclose.nvim](https://github.com/m4xshen/autoclose.nvim) and [smartcolumn.nvim](https://github.com/m4xshen/smartcolumn.nvim), I've been developing Neovim plugins for a while. In this tutorial, I'll break down the process and share my insights to help you start your own journey!
+
 ## Setup project
 
 Before developing the plugin, we need to set it up. There are two different approaches:
@@ -96,6 +98,7 @@ return M
 If you want to load Lua module on demand, you can place them inside the `lua/` directory in your `'runtimepath'` and load them with `require`.
 
 Here are the rules when `require` finding files:
+
 - Any `.` in the module name is treated as a directory separator when searching.
 - When the file with module name is not searched, it then searches for `init.lua` inside the folder with module name.
 - You don't need to type the `.lua` extension.
@@ -107,6 +110,7 @@ So if you put the code above into `lua/example/init.lua`, you can run `:lua requ
 ## Example
 
 After understanding the structure of Neovim plugin, let's finish the example.nvim! This plugin does 2 simple things:
+
 - It maps the `<Leader>h` to print `hello` to the user.
 - If user specify their name when setting up plugins, it prints `hello, {user_name}` instead.
 
@@ -156,7 +160,6 @@ end
 ```
 
 After that this simple plugin is finished. Now try pressing `<Leader>h` and the greeting message should be printed! You can also set your name inside `setup` function so that it prints greeting message with name:
-
 
 ```lua
 require("example").setup({
