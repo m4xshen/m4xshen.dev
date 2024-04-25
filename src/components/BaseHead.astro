@@ -1,4 +1,5 @@
 ---
+import { ViewTransitions } from 'astro:transitions';
 import '../styles/global.css';
 
 interface Props {
@@ -44,3 +45,4 @@ const { title, description, image = '/og.png' } = Astro.props;
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
 <link rel="sitemap" href="/sitemap-index.xml" />
+<ViewTransitions />
