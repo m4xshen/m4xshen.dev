@@ -9,7 +9,7 @@ Hi, I'm Max Shen, an open source developer and generative artist from Taiwan. I 
 ## Contact
 
 - [GitHub](https://github.com/m4xshen)
-- [LinkedIn](https://www.linkedin.com/in/m4xshen)
+- [X](https://x.com/m4xshen)
 - [Email](mailto:m4xshen@gmail.com)
 
 ## Skills
