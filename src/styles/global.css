@@ -1,0 +1,13 @@
+.prose code:not(pre code) {
+  padding: 0.25em 0.3em;
+  background-color: #24292e;
+  border-radius: 0.3rem;
+}
+
+.prose code:not(pre code):before {
+  content: "";
+}
+
+.prose code:not(pre code):after {
+  content: "";
+}
