@@ -10,12 +10,13 @@ In Vim, there's a variety of commands that let you accomplish tasks in different
 
 Here are some general rules of my workflow:
 
-1. Don't use mouse and arrow keys (unless you have a custom keyboard layout with arrows near the home row).
-2. Use relative jump (eg: `5k 12j`) for vertical movement inside screen.
-3. Use `CTRL-U CTRL-D CTRL-B CTRL-F gg G` for vertical movement outside screen.
-4. Use word-motion (`w W b B e E ge gE`) for short distance horizontal movement.
-5. Use `f F t T 0 ^ $ , ;` for mid long distance horizontal movement.
-6. Use `operator + motion/text-object` (eg: `ci{ d5j`) whenever possible.
+1. Avoid using the mouse and arrow keys if they are not at the home row of your keyboard.
+2. Use relative jump (eg: `5j` `12-`) for vertical movement within the screen.
+3. Use `CTRL-U` `CTRL-D` `CTRL-B` `CTRL-F` `gg` `G` for vertical movement outside the screen.
+4. Use word-motion (`w` `W` `b` `B` `e` `E` `ge` `gE`) for short-distance horizontal movement.
+5. Use `f` `F` `t` `T` `,` `;` `0` `^` `$` for medium to long-distance horizontal movement.
+6. Use operator + motion/text-object (eg: `ci{` `y5j` `dap`) whenever possible.
+7. Use `%` and [square bracket commands](/posts/vim-commands-for-navigation-between-brackets) to jump between brackets.
 
 If you are not familiar with some of the commands and concepts, you can learn about them in [Essential Vim commands for efficient text editing](/posts/vim-basic-commands).
 

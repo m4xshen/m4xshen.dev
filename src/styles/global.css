@@ -1,7 +1,8 @@
 .prose code:not(pre code) {
-  padding: 0.25em 0.3em;
+  padding: 0.25em 0.4em;
   background-color: #24292e;
   border-radius: 0.3rem;
+  font-weight: 400;
 }
 
 .prose code:not(pre code):before {
