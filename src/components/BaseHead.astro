@@ -8,7 +8,10 @@ interface Props {
 	image?: string;
 }
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+let canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
+if (canonicalURL.endsWith('/')) {
+  canonicalURL = canonicalURL.slice(0, -1);
+}
 
 const { title, description, image = '/og.png' } = Astro.props;
 ---
