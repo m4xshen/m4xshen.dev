@@ -12,3 +12,8 @@
 .prose code:not(pre code):after {
   content: "";
 }
+
+img {
+  border: 1px solid #24292e;
+  border-radius: 10px;
+}
