@@ -14,7 +14,7 @@ const posts = (await getCollection('blog')).sort(
       {
       posts.map((post) => (
         <a
-          href={`/posts/${post.slug}/`}
+          href={`/posts/${post.slug}`}
           class="flex flex-col justify-between no-underline"
         >
           <h1
