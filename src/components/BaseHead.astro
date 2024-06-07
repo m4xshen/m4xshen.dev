@@ -5,15 +5,15 @@ import '../styles/global.css';
 interface Props {
 	title: string;
 	description: string;
-	image?: string;
 }
 
+const ogImageURL = new URL('og.png', Astro.site);
 let canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
 if (canonicalURL.endsWith('/')) {
   canonicalURL = canonicalURL.slice(0, -1);
 }
 
-const { title, description, image = '/og.png' } = Astro.props;
+const { title, description } = Astro.props;
 ---
 <!-- Global Metadata -->
 <meta charset="utf-8" />
@@ -35,17 +35,17 @@ const { title, description, image = '/og.png' } = Astro.props;
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
-<meta property="og:url" content={Astro.url} />
+<meta property="og:url" content={canonicalURL} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={new URL(image, Astro.url)} />
+<meta property="og:image" content={ogImageURL} />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={Astro.url} />
+<meta property="twitter:url" content={canonicalURL} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={new URL(image, Astro.url)} />
+<meta property="twitter:image" content={ogImageURL} />
 
 <link rel="sitemap" href="/sitemap-index.xml" />
 <ViewTransitions />
