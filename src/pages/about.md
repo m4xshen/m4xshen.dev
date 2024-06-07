@@ -29,4 +29,4 @@ Hi, I'm Max Shen, an open source developer from Taiwan. I am passionate about so
 - WM: Hyprland
 - Editor: Neovim
 - Terminal: Kitty
-- Keyboard: Keychron K6 Pro
+- Keyboard: Keychron K6 Pro with GMK Dots 2
