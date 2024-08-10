@@ -3,6 +3,7 @@ import FormattedDate from '../components/FormattedDate.astro';
 import Base from '../layouts/Base.astro';
 
 const { title, description, pubDate } = Astro.props;
+let canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
 ---
 
 <Base title={title} description={description}>
@@ -16,10 +17,13 @@ const { title, description, pubDate } = Astro.props;
       <slot />
       <hr />
       <div>
-        If you like this kind of content and want to see more of it in the
-        future, consider following my
-        <a target="_blank" href="https://twitter.com/m4xshen">X (Twitter)</a>
-        to get notified when I post new content!
+        If you like this kind of content you can help me
+        <a
+          target="_blank"
+          href={`https://x.com/intent/tweet?text=${title + '%0Aby @m4xshen'}&url=${canonicalURL}`}
+        >
+          sharing this post on X</a
+        >. Thank you!
       </div>
     </div>
   </article>
