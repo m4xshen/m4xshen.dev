@@ -4,7 +4,7 @@ pubDate: '2024-08-09'
 description: "Learn why you might be overusing Vim's visual mode and how adopting a different mindset can help you use Vim more efficiently. Discover alternative commands and techniques that can save you keystrokes and boost your productivity in this insightful post."
 ---
 
-When I started learning Vim 5 years ago, I read through a lot of blog posts and watched a lot of videos. I notice that most of the tutorials teach visual mode in a way that makes it seem like an important part of Vim.
+When I started learning Vim few years ago, I read through a lot of blog posts and watched a lot of videos. I notice that most of the tutorials teach visual mode in a way that makes it seem like an important part of Vim.
 
 After using Vim for a while, I think this is a mistake. Visual mode is not as important as most people think. In fact, you might be overusing it.
 
@@ -57,22 +57,22 @@ dk
 
 ## Different mindset
 
-The overall idea of above two examples is that instead of `V/v` + `motion` + `operator`, you can use `operator` + `motion` directly.
+In the above examples, the first editing approach is: `v/V` + [`motion`](/posts/vim-basic-commands#motions) + [`operator`](/posts/vim-basic-commands/#operator). You select text, move the cursor to a specific location, and then do the operation.
 
-(Check `:h operator` and `:h motion` if you are not familiar with them.)
+The second approach is: [`operator`](/posts/vim-basic-commands/#operator) + [`motion`](/posts/vim-basic-commands#motions). This means apply an operation from current cursor position to a specific location. In this way you don't need to enter visual mode at all.
 
-I think the reason why so many people use visual mode is because when we use general text editors, we are used to selecting text with the mouse and then do the operation. So, when we switch to Vim, we try to do the same thing with visual mode.
+I think the reason why so many people stick to first approach is because when we use general text editors, we are used to selecting text with the mouse and then do the operation. So, when we switch to Vim, we try to do the same thing with visual mode.
 
-However, Vim is not a general text editor. It has a lot of powerful commands that can help you achieve the same result with fewer keystrokes. So instead of thinking about selecting text and then doing the operation, think about the operation you want to do and then find the right motion command to achieve it.
+However, Vim is not a general text editor. It has a lot of powerful normal mode `motion` that can help you achieve the same result without selecting text first.
 
-This is a different mindset, but once you get used to it, you will find that you can do things much faster in Vim.
+This is a different mindset, but once you get used to it, you will find that you can do things much faster in Vim!
 
 ## You still need visual mode
 
 While I think you might be overusing visual mode, I'm not saying you should never use it.
 
-If you can't find a motion command to achieve what you want, visual mode is a good fallback. Here are some situations where you actually need visual mode:
-1. Select text that is not selectable with simple motion commands.
+If you can't find a `motion`  to achieve what you want, visual mode is a good fallback. Here are some situations where you actually need visual mode:
+1. Select text that is not selectable with simple `motion`.
 2. Select lines that are out of the current view.
 3. Visually confirm the text you are going to operate on.
 4. Use blockwise visual mode to operate on multiple lines at once.

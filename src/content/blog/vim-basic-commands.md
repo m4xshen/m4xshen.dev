@@ -4,7 +4,7 @@ pubDate: '2023-01-25'
 description: "Master the essential Vim commands for efficient text editing. Learn Normal, Insert, and Command-line modes, navigation, editing, and more in this comprehensive Vim tutorial."
 ---
 
-In this tutorial, I'll cover the basic commands that you need to know to work in Vim efficiently. I recommend you to open a file with Vim/Neovim and try the command while reading it.
+In this tutorial, I'll cover the basic commands and concepts that you need to know to work in Vim efficiently. I recommend you to open a file with Vim/Neovim and try the command while reading it.
 
 The 3 most used modes in Vim:
 
@@ -16,24 +16,28 @@ You can learn more about each command with the Vim's help file. Open it by typin
 
 ## Normal Mode
 
-To begin with, let's learn how to move in Vim.
+To begin with, let's learn how to move your cursor in Vim normal mode.
 
-### Up-down Motions
+### Motions
 
-See more with `:h up-down-motions`.
+`motion` is a command that moves your cursor to a specific location. Here are some basic motions:
+
+#### Up-down motions
+
 
 ```plaintext
 k           go up
 j           go down
 -           go up and move to the first non-blank character
 + or <CR>   go down and move to the first non-blank character
+(<CR> means enter)
 gg          go to first line
 G           go to last line
 ```
 
-### Left-right Motions
+Learn more with `:h up-down-motions`.
 
-See more with `:h left-right-motions`.
+#### Left-right motions
 
 ```plaintext
 h           go left
@@ -49,9 +53,9 @@ T{char}		go till after the occurrence of {char} to the left
 ,			repeat latest f, t, F or T in opposite direction
 ```
 
-### Word Motions
+Learn more with `:h left-right-motions`.
 
-See more with `:h word-motions`.
+#### Word motions
 
 ```plaintext
 w			go one word forward
@@ -64,48 +68,57 @@ ge			go backward to the end of word
 gE			go backward to the end of word, ignore symbol
 ```
 
-After being able to move in Vim, let's learn how to editing text. The pattern of editing looks like this:
+Learn more with `:h word-motions`.
 
-```plaintext
-operator + motion or text-object
-```
+#### Motion with number
+
+You can add number before `motion` to execute it multiple times. For example, `5j` will move the cursor down 5 lines.
+
+This is very useful when you want to move the cursor to a specific line quickly. This is often used with `'relativenumber'` option enabled so you can see the line number relative to the current line.
 
 ### Operator
 
-See more with `:h operator`.
+After being able to move in Vim, let's learn how to editing text. The way to edit text in Vim is through `operator`.
 
 ```plaintext
 d           delete
-y           yank(copy) into register
+y           yank(copy)
+c           change(delete and enter insert mode)
+```
+
 (after delete or yank you can use `p` to paste)
-c           change(delete and start insert)
-~           swap case
-=           format
-```
 
-Some examples of operator + motion:
+Learn more with `:h operator`.
 
-```plaintext
-cw          change a word
-dt(         delete till the first occurrence of (
-y5j         yank to 5 lines down
-```
+#### Operation to current line
 
-Exceptions:
+A most simple way to use `operator` is to repeat it twice, which will apply the operation to the current line:
 
-```plaintext
-dd          delete current line
-D           delete until the end of the line
-yy          yank current line
-Y           yank until the end of the line
-cc          change current line
-C           change until the end of the line
-==          format current line
-```
+- `d` `d` - delete current line
+- `y` `y` - yank current line
+- `c` `c` - change current line
+
+#### Operation to end of line
+
+You can use the uppercase version of `operator`, which will apply the operation from the current cursor position to the end of the line:
+
+- `D` - delete until the end of the line
+- `Y` - yank until the end of the line
+- `C` - change until the end of the line
+
+#### Operation with motion
+
+Another way to use `operator` is to combine it with `motion` that we just learned. This will apply the operation from the current cursor position to the specific location.
+
+Some examples of `operator` + `motion`:
+
+- `d` `e` - `d`elete to the `e`nd of the word
+- `c` `t(` - `c`hange `t`ill the first occurrence of `(`
+- `y` `5j` - `y`ank to 5 lines down
+
+Another way to use `operator` is to combine it with `text-objects`. Let's learn about `text-objects` first.
 
 ### Text Objects
-
-See more with `:h text-objects`.
 
 ```plaintext
 iw          inside word
@@ -114,39 +127,55 @@ aw          around word
 ip          inside paragraph
 ap          around paragraph
 
-it          inside tag block (for HTML and XML)
-at          around tag block (for HTML and XML)
+it          inside tag block (for HTML, JSX, etc.)
+at          around tag block (for HTML, JSX, etc.)
 
 i{          inside {}
 a{          around {}
 ...(you can apply this to any pair block [] () <> '' "" ``)
 ```
 
-Some examples of operator + text-object:
+Learn more with `:h text-objects`.
 
-```plaintext
-ci"         change inside ""
-dap         delete around paragraph
-=i{         format the code inside {}
-```
+#### Operation with text object
 
-Note: If the text-object is pair block, Vim will find the nearest one from the right of your cursor. This trick is very useful.
+Some examples of `operator` + `text-objects`:
 
-Example (^ points to the position of your cursor):
+- `c` `i"` - `c`hange `i`nside `""`
+- `d` `a{` - `d`elete `a`round `{}`
+- `y` `ap` - `y`ank `a`round `p`aragraph
+
+Tip: If the `text-objects` is pair block, Vim will find the nearest one from the right of your cursor. This trick is very useful.
+
+Example (`|` is the position of your cursor):
 
 ```cpp
 int main(void) {
-  cout << "test";
-^
+| cout << "test";
+
   return 0;
 }
+
+NORMAL MODE
 ```
 
-You can use `ci"` to change the text inside "" pair although your cursor is at the beginning of the line.
+After you press `ci"`:
+
+```cpp
+int main(void) {
+  cout << "|";
+
+  return 0;
+}
+
+INSERT MODE
+```
+
+You can use `ci"` to change the text inside `"test"` even if your cursor is at the beginning of the line.
 
 ### Scrolling
 
-See more with `:h scrolling`.
+Scrolling is useful when you want to move vertically to a position that is not visible on the screen.
 
 ```plaintext
 CTRL-U       scroll window half a screen upwards
@@ -155,9 +184,11 @@ CTRL-B       scroll window a full screen upwards
 CTRL-F       scroll window a full screen downwards
 ```
 
+Learn more with `:h scrolling`.
+
 ### Inserting
 
-See more with `:h inserting`.
+There are several ways to enter insert mode:
 
 ```plaintext
 i           insert text before the cursor
@@ -168,11 +199,9 @@ o           begin a new line below the cursor and insert text
 O           begin a new line above the cursor and insert text
 ```
 
+Learn more with `:h inserting`.
+
 ### Others
-
-You can add number before command to execute it [count] times.
-
-Examples: `5k` will go up 5 lines
 
 ```plaintext
 s           delete character and start insert (synonym for cl)
@@ -194,8 +223,6 @@ i_CTRL-O    execute one command in Normal mode and then return to Insert mode
 ```
 
 ## Command-line Mode
-
-(`<CR>` means enter)
 
 ```plaintext
 :w<CR>          save the current file
