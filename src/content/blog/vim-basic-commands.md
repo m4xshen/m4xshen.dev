@@ -106,7 +106,7 @@ You can use the uppercase version of `operator`, which will apply the operation 
 - `Y` - yank until the end of the line
 - `C` - change until the end of the line
 
-#### Operation with motion
+#### Operator with motion
 
 Another way to use `operator` is to combine it with `motion` that we just learned. This will apply the operation from the current cursor position to the specific location.
 
@@ -137,7 +137,7 @@ a{          around {}
 
 Learn more with `:h text-objects`.
 
-#### Operation with text object
+#### Operator with text object
 
 Some examples of `operator` + `text-objects`:
 
