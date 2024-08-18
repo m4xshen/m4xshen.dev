@@ -2,6 +2,7 @@
 title: "You might be overusing Vim visual mode"
 pubDate: '2024-08-09'
 description: "Learn why you might be overusing Vim's visual mode and how adopting a different mindset can help you use Vim more efficiently. Discover alternative commands and techniques that can save you keystrokes and boost your productivity in this insightful post."
+ogImage: 'images/overuse-vim-visual-mode/og.png'
 ---
 
 When I started learning Vim few years ago, I read through a lot of blog posts and watched a lot of videos. I notice that most of the tutorials teach visual mode in a way that makes it seem like an important part of Vim.

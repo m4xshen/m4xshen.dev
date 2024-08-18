@@ -2,18 +2,13 @@
 import { ViewTransitions } from 'astro:transitions';
 import '../styles/global.css';
 
-interface Props {
-  title: string;
-  description: string;
-}
+const { title, description, ogImage } = Astro.props;
 
-const ogImageURL = new URL('og.png', Astro.site);
+const ogImageURL = new URL(ogImage ? ogImage : 'og.png', Astro.site);
 let canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
 if (canonicalURL.endsWith('/')) {
   canonicalURL = canonicalURL.slice(0, -1);
 }
-
-const { title, description } = Astro.props;
 ---
 
 <!-- Global Metadata -->

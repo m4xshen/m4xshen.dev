@@ -2,11 +2,11 @@
 import FormattedDate from '../components/FormattedDate.astro';
 import Base from '../layouts/Base.astro';
 
-const { title, description, pubDate } = Astro.props;
+const { title, description, pubDate, ogImage } = Astro.props;
 let canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
 ---
 
-<Base title={title} description={description}>
+<Base title={title} description={description} ogImage={ogImage}>
   <article class="prose prose-invert mx-auto my-20">
     <div>
       <h1 class="text-3xl" transition:name={`title-${title}`}>{title}</h1>
