@@ -4,7 +4,7 @@ pubDate: 2024-06-07
 description: "Learn how to promote your open-source project with these tips. From preparing your project to sharing it with the community, discover the strategies to attract users and contributors."
 ---
 
-Recently, my open-source Neovim plugin [hardtime.nvim](https://github.com/m4xshen/hardtime.nvim) reached 1k stars on GitHub!
+Recently, my Neovim plugin: [hardtime.nvim](https://github.com/m4xshen/hardtime.nvim) reached 1k stars on GitHub!
 
 ![](/images/hardtime-1k-stars.png)
 
@@ -38,7 +38,7 @@ It is also important to separate the content into sections using markdown header
 
 ### 2. Contribution guide
 
-If you want people to contribute to your project, you need to provide a contribution guide. It should include:
+If you want people to contribute to your project, you need to provide a contribution guide, which should include:
 
 - How to set up the development environment
 - The coding style of this project
@@ -65,9 +65,11 @@ You can share your project on the platform where your target community is active
 
 <blockquote class="reddit-embed-bq" style="height:500px" data-embed-theme="dark" data-embed-showedits="false" data-embed-created="2024-06-07T07:16:09.555Z" data-embed-height="566"><a href="https://www.reddit.com/r/neovim/comments/14jferq/hardtimenvim_a_neovim_plugin_helping_you/">hardtime.nvim - A Neovim plugin helping you establish good command workflow and habit</a><br> by<a href="https://www.reddit.com/user/m4xshen/">u/m4xshen</a> in<a href="https://www.reddit.com/r/neovim/">neovim</a></blockquote><script async="" src="https://embed.reddit.com/widgets.js" charset="UTF-8"></script>
 
-When it comes to sharing on social media, it is crucial to provide a visual element. People are more likely to click on a post with a GIF or image than a plain text post.
+Here are 3 things I always do when sharing project on Reddit:
 
-For the detail explanation of your project, you can post it in the comment section:
+- Post with GIF or image. People are more likely to click on a post like this than a plain text post.
+- Post at the user-active time. I use website like [SocialRise](https://social-rise.com/subreddit-analysis) to search the best post time of a specific subreddit.
+- Post the detail explanation of your project as a comment to provide more information:
 
 <blockquote class="reddit-embed-bq" data-embed-theme="dark" data-embed-showedits="false" data-embed-created="2024-06-07T07:20:08.959Z" data-embed-height="641"><a href="https://www.reddit.com/r/neovim/comments/14jferq/comment/jpkuvyz/">Comment</a><br> by<a href="https://www.reddit.com/user/m4xshen/">u/m4xshen</a> from discussion<a href="https://www.reddit.com/r/neovim/comments/14jferq/hardtimenvim_a_neovim_plugin_helping_you/"><no value=""></no></a><br> in<a href="https://www.reddit.com/r/neovim/">neovim</a></blockquote><script async="" src="https://embed.reddit.com/widgets.js" charset="UTF-8"></script>
 
@@ -75,11 +77,16 @@ Also remember to engage with the community. If someone asks a question or gives 
 
 ### 2. Write articles
 
-When I say write articles, I don't mean you have to write a post about your project. Often, people are not interested in reading a post that is just a promotion of a project. Instead, you can write articles related to the problem your project solves and mention your project in the article.
+Don't get me wrong. I don't mean you have to write a post about your project. Often, people are not interested in reading a post that is just a promotion of a project. Instead, you can write articles related to the problem your project solves and mention your project in the article.
 
-For example, I wrote an article about [practical Vim command workflow](/posts/vim-command-workflow). In the article, I share my experience of using Vim operators and motions and how they help me become more productive. At the end of the article, I mention hardtime.nvim as a tool to help establish good command workflow.
+For example, here are my 2 articles related to the Vim command:
 
-In this way you provide value to the readers and promote your project at the same time.
+- [Practical Vim command workflow](/posts/vim-command-workflow)
+- [You might be overusing Vim visual mode](/posts/overuse-vim-visual-mode)
+
+At the end of both articles, I mention hardtime.nvim as a tool to help establish good command workflow and quit bad habits.
+
+In this way, since you provide value to the readers, they will more likely to take a look at your project.
 
 ### 3. Hacktoberfest
 
