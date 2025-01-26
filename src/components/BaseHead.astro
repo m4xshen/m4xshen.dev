@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
 import '../styles/global.css';
 
 const { title, description, ogImage } = Astro.props;
@@ -40,6 +40,6 @@ if (canonicalURL.endsWith('/')) {
 <meta property="twitter:image" content={ogImageURL} />
 
 <link rel="sitemap" href="/sitemap-index.xml" />
-<ViewTransitions />
-<script defer data-domain="m4xshen.dev" src="https://plausible.io/js/script.js"
+<ClientRouter />
+<script is:inline data-domain="m4xshen.dev" src="https://plausible.io/js/script.js"
 ></script>
