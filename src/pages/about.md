@@ -13,12 +13,12 @@ I'm an indie hacker and open-source developer from Taiwan, passionate about buil
   - [autoclose.nvim](https://github.com/m4xshen/autoclose.nvim)
   - [smartcolumn.nvim](https://github.com/m4xshen/smartcolumn.nvim)
 - Apps:
-  - [Flowmodor](https://flowmodor.com?utm_source=m4xshen-dev)
+  - [Flowmo](https://flowmo.io?utm_source=m4xshen-dev)
   - [Repohistory](https://repohistory.com)
 
 ## Fun facts
 
-- I'm currently building my own [SaaS](https://flowmodor.com?utm_source=m4xshen-dev) in public.
+- I'm currently building my own [SaaS](https://flowmo.io?utm_source=m4xshen-dev) in public.
 - My best typing speed in 1 minute is [135wpm](https://monkeytype.com/profile/m4xshen).
 - I like to [customize my desktop](https://github.com/m4xshen/dotfiles).
 - I'm a junior student majoring in Electrical Engineering.
