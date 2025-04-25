@@ -1,16 +1,80 @@
 ---
-import Base from '../layouts/Base.astro';
+import GitHub from '../icons/GitHub.astro';
+import X from '../icons/X.astro';
+import Bluesky from '../icons/Bluesky.astro';
+import Threads from '../icons/Threads.astro';
+import BaseHead from '../components/BaseHead.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+const { title, description, ogImage } = Astro.props;
 ---
 
-<Base>
-  <section class="mt-10 prose prose-invert">
-    <h1>Max Shen</h1>
-    <hr />
-    <p>Hi 👋🏼 I'm Max, an indie hacker and open-source contributor from Taiwan 🇹🇼.</p>
-    <p>I'm currently building:</p>
-    <ul>
-      <li><a href="https://flowmo.io">Flowmo</a>: A flexible Pomodoro timer that won't break your flow state</li>
-      <li><a href="https://github.com/m4xshen/hardtime.nvim">hardtime.nvim</a>: A Neovim plugin to help you establish good command workflow and quit bad habits</li>
-    </ul>
-  </section>
-</Base>
+<!doctype html>
+<html lang="en" class="bg-[#0a0a0b] text-white">
+  <head>
+    <BaseHead
+      title={title ? title + ' | ' + SITE_TITLE : SITE_TITLE}
+      description={description ? description : SITE_DESCRIPTION}
+      ogImage={ogImage}
+    />
+  </head>
+  <body class="mx-5 xs:mx-10 sm:w-max sm:mx-auto flex flex-col items-center justify-center bg-center min-h-screen gap-6">
+    <img
+      src="/avatar.png"
+      alt="Author avatar image"
+      transition:name="avatar"
+      class="h-24 w-24 rounded-full"
+    />
+    <h1 class="font-semibold text-2xl">Max Shen</h1>
+    <div>
+      <a
+        target="_blank"
+        href="https://flowmo.io"
+        class="underline hover:text-[#DBBFFF] transition-colors duration-300"
+      >
+        Flowmo</a>
+      founder &bull;
+      <a
+        target="_blank"
+        href="https://github.com/m4xshen/hardtime.nvim"
+        class="underline hover:text-[#DBBFFF] transition-colors duration-300"
+      >
+        hardtime.nvim</a>
+      maintainer
+    </div>
+    <div class="flex gap-5">
+      <a
+        target="_blank"
+        href="https://github.com/m4xshen"
+        class="fill-white hover:fill-[#DBBFFF] transition duration-300"
+        aria-label="GitHub"
+      >
+        <GitHub />
+      </a>
+      <a
+        target="_blank"
+        href="https://bsky.app/profile/m4xshen.dev"
+        class="fill-white hover:fill-[#DBBFFF] transition duration-300"
+        aria-label="Bluesky"
+      >
+        <Bluesky />
+      </a>
+      <a
+        target="_blank"
+        href="https://x.com/m4xshen"
+        class="fill-white hover:fill-[#DBBFFF] transition duration-300"
+        aria-label="X"
+      >
+        <X />
+      </a>
+      <a
+        target="_blank"
+        href="https://threads.com/@m4xshen.dev"
+        class="fill-white hover:fill-[#DBBFFF] transition duration-300"
+        aria-label="Threads"
+      >
+        <Threads />
+      </a>
+    </div>
+  </body>
+</html>
