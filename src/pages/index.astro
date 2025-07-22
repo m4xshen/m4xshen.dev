@@ -3,6 +3,7 @@ import GitHub from '../icons/GitHub.astro';
 import X from '../icons/X.astro';
 import Bluesky from '../icons/Bluesky.astro';
 import Threads from '../icons/Threads.astro';
+import Feather from '../icons/Feather.astro';
 import BaseHead from '../components/BaseHead.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
@@ -36,6 +37,13 @@ const { title, description, ogImage } = Astro.props;
         Repohistory</a>
     </div>
     <div class="flex gap-5">
+      <a
+        href="/posts"
+        class="fill-white hover:fill-[#FCE2C6] transition duration-300"
+        aria-label="Posts"
+      >
+        <Feather />
+      </a>
       <a
         target="_blank"
         href="https://github.com/m4xshen"
