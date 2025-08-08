@@ -1,0 +1,27 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+const { title, description, ogImage } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="bg-[#0a0a0b] text-white">
+  <head>
+    <BaseHead
+      title={title ? title + ' | ' + SITE_TITLE : 'COSCUP | ' + SITE_TITLE}
+      description={description ? description : SITE_DESCRIPTION}
+      ogImage={ogImage}
+    />
+  </head>
+  <body class="mx-5 flex flex-col items-center justify-center h-[100dvh]">
+    <div class="prose prose-invert">
+      <ul>
+        <li>簡報連結：如何宣傳你的 Side Project</li>
+        <li><a href="https://repohistory.com" target="_blank">Repohistory</a></li>
+        <li><a href="https://github.com/m4xshen" target="_blank">GitHub</a></li>
+        <li><a href="https://threads.com/@m4xshen.dev" target="_blank">Threads</a></li>
+      </ul>
+    </div>
+  </body>
+</html>
