@@ -1,3 +1,11 @@
 {
-  "trailingSlash": false
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/resume",
+      "headers": [
+        { "key": "Content-Type", "value": "application/pdf" }
+      ]
+    }
+  ]
 }
