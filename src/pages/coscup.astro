@@ -14,7 +14,7 @@ const { title, description, ogImage } = Astro.props;
       ogImage={ogImage}
     />
   </head>
-  <body class="mx-5 flex flex-col items-center justify-center h-[100dvh]">
+  <body class="mx-5 flex h-[100dvh] flex-col items-center justify-center">
     <div class="prose prose-invert">
       <ul>
         <li>
@@ -25,9 +25,13 @@ const { title, description, ogImage } = Astro.props;
             簡報連結
           </a>
         </li>
-        <li><a href="https://repohistory.com" target="_blank">Repohistory</a></li>
+        <li>
+          <a href="https://repohistory.com" target="_blank">Repohistory</a>
+        </li>
         <li><a href="https://github.com/m4xshen" target="_blank">GitHub</a></li>
-        <li><a href="https://threads.com/@m4xshen.dev" target="_blank">Threads</a></li>
+        <li>
+          <a href="https://threads.com/@m4xshen.dev" target="_blank">Threads</a>
+        </li>
       </ul>
     </div>
   </body>

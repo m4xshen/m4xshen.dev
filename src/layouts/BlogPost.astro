@@ -10,7 +10,7 @@ let canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
   <article class="prose prose-invert mx-auto my-20">
     <div>
       <h1 class="text-3xl" transition:name={`title-${title}`}>{title}</h1>
-      <div class="text-sm text-gray-400 flex-shrink-0">
+      <div class="flex-shrink-0 text-sm text-gray-400">
         <FormattedDate date={pubDate} name={`date-${title}`} />
       </div>
       <hr />
@@ -41,6 +41,5 @@ let canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
     data-input-position="bottom"
     data-theme="dark_tritanopia"
     data-lang="en"
-    crossorigin="anonymous"
-    ></script>
+    crossorigin="anonymous"></script>
 </Base>

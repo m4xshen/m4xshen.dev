@@ -19,19 +19,19 @@ const { title, description, ogImage } = Astro.props;
       ogImage={ogImage}
     />
   </head>
-  <body class="mx-5 flex flex-col items-center justify-center h-[100dvh] gap-6">
+  <body class="mx-5 flex h-[100dvh] flex-col items-center justify-center gap-6">
     <img
       src="/avatar.png"
       alt="Author avatar image"
       transition:name="avatar"
       class="h-24 w-24 rounded-full"
     />
-    <h1 class="font-bold text-3xl">Max Shen</h1>
+    <h1 class="text-3xl font-bold">Max Shen</h1>
     <div>Indie hacker from 🇹🇼</div>
     <div class="flex gap-5">
       <a
         href="/posts"
-        class="fill-white hover:fill-[#FCE2C6] transition duration-300"
+        class="fill-white transition duration-300 hover:fill-[#FCE2C6]"
         aria-label="Posts"
       >
         <Feather />
@@ -39,7 +39,7 @@ const { title, description, ogImage } = Astro.props;
       <a
         target="_blank"
         href="https://github.com/m4xshen"
-        class="fill-white hover:fill-[#FCE2C6] transition duration-300"
+        class="fill-white transition duration-300 hover:fill-[#FCE2C6]"
         aria-label="GitHub"
       >
         <GitHub />
@@ -47,7 +47,7 @@ const { title, description, ogImage } = Astro.props;
       <a
         target="_blank"
         href="https://bsky.app/profile/m4xshen.dev"
-        class="fill-white hover:fill-[#FCE2C6] transition duration-300"
+        class="fill-white transition duration-300 hover:fill-[#FCE2C6]"
         aria-label="Bluesky"
       >
         <Bluesky />
@@ -55,7 +55,7 @@ const { title, description, ogImage } = Astro.props;
       <a
         target="_blank"
         href="https://x.com/m4xshen"
-        class="fill-white hover:fill-[#FCE2C6] transition duration-300"
+        class="fill-white transition duration-300 hover:fill-[#FCE2C6]"
         aria-label="X"
       >
         <X />
@@ -63,7 +63,7 @@ const { title, description, ogImage } = Astro.props;
       <a
         target="_blank"
         href="https://threads.com/@m4xshen.dev"
-        class="fill-white hover:fill-[#FCE2C6] transition duration-300"
+        class="fill-white transition duration-300 hover:fill-[#FCE2C6]"
         aria-label="Threads"
       >
         <Threads />
