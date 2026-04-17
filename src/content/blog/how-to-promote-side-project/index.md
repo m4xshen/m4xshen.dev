@@ -1,12 +1,12 @@
 ---
-title: "How to promote your open-source project"
+title: "How to promote your side project"
 pubDate: 2025-05-22
-description: "Learn how to promote your open-source project with these tips. From preparing your project to sharing it with the community, discover the strategies to attract users and contributors."
+description: "Learn how to promote your side project with these tips. From preparing your project to sharing it with the community, discover the strategies to attract users and contributors."
 ---
 
 Recently, my Neovim plugin: [hardtime.nvim](https://github.com/m4xshen/hardtime.nvim) reached 2k stars on GitHub!
 
-I think it's a good time to share what I have learned from promoting my open-source project. I break down the process into three stages: preparation, promotion, and maintenance.
+I think it's a good time to share what I have learned from promoting my side project. I break down the process into three stages: preparation, promotion, and maintenance.
 
 ## Preparation
 
@@ -90,7 +90,7 @@ By tagging your project with `hacktoberfest` and providing issues that are good 
 
 ## Maintenance
 
-Building an open-source project is not a one-time thing. You need to maintain it to keep it alive. User feedback, bug reports, and feature requests will keep coming in, and you need to handle them properly.
+Building an side project is not a one-time thing. You need to maintain it to keep it alive. User feedback, bug reports, and feature requests will keep coming in, and you need to handle them properly.
 
 Using issue labels can help you organize the issues. For example, you can use `bug`, `enhancement`, `good first issue`, etc., to categorize the issues. This makes it easier for you to prioritize and work on them.
 
@@ -118,4 +118,4 @@ Here's the GitHub traffic chart I got few days after posting on Reddit and Hacke
 
 ## Conclusion
 
-That's pretty much it! I hope you find these tips helpful for promoting your open-source project. Remember, building an open-source project is not just about writing code. A good project is useless if no one knows about it. So don't be shy, share your project with the world!
+That's pretty much it! I hope you find these tips helpful for promoting your side project. Remember, building an side project is not just about writing code. A good project is useless if no one knows about it. So don't be shy, share your project with the world!

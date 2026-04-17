@@ -12,7 +12,7 @@ export default defineConfig({
     },
   },
   redirects: {
-    '/about': '/',
+    '/posts/promote-open-source-project': '/posts/how-to-promote-side-project',
   },
   trailingSlash: 'never',
 });
