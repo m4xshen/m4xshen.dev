@@ -14,7 +14,7 @@ const posts = (await getCollection('blog')).sort(
       {
         posts.map((post) => (
           <a
-            href={`/posts/${post.slug}`}
+            href={`/posts/${post.id.replace(/\.mdx?$/, '')}`}
             class="hover:opacity-75 transition-opacity duration-300 flex flex-col justify-between no-underline"
           >
             <h1
