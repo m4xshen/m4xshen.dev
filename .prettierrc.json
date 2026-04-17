@@ -1,4 +1,0 @@
-{
-  "singleQuote": true,
-  "importOrder": ["<THIRD_PARTY_MODULES>", "^@/", "^[./]"]
-}
