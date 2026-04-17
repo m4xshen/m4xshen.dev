@@ -9,7 +9,8 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "lint": "eslint ."
   },
   "dependencies": {
     "@astrojs/check": "^0.9.8",
@@ -25,6 +26,9 @@
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.10",
+    "@typescript-eslint/parser": "^8.58.2",
+    "eslint": "^10.2.1",
+    "eslint-plugin-astro": "^1.7.0",
     "prettier": "3.8.3",
     "prettier-plugin-astro": "0.14.1",
     "prettier-plugin-tailwindcss": "^0.7.2"
